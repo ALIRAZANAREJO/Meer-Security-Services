@@ -1,13 +1,13 @@
 // ================= Firebase Config =================
   const firebaseConfig = {
-    apiKey: "AIzaSyCmL8qcjg4S6NeY3erraq_XhlDJ7Ek2s_E",
-    authDomain: "palestine-web.firebaseapp.com",
-    databaseURL: "https://palestine-web-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "palestine-web",
-    storageBucket: "palestine-web.appspot.com",
-    messagingSenderId: "35190212487",
-    appId: "1:35190212487:web:0a699bb1fa7b1a49113522",
-    measurementId: "G-8TE04Z9ZFW"
+    apiKey: "AIzaSyABmS9gvQF9OjgF2Aj3M5B3QjNW0DHIVmc",
+    authDomain: "meer-security.firebaseapp.com",
+    databaseURL: "https://meer-security-default-rtdb.firebaseio.com",
+    projectId: "meer-security",
+    storageBucket: "meer-security.firebasestorage.app",
+    messagingSenderId: "335010941797",
+    appId: "1:335010941797:web:ffc86d361cc03592bd2f8c",
+    measurementId: "G-EJ9LS3CR57"
   };
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
