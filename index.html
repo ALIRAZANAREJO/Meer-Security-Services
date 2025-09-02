@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Meer Security’s</title>
+    <link rel="stylesheet" href="./Buckit/Navbaar.css">
+       <link rel="stylesheet" href="/Css/Stategy.css">
+       <link rel="stylesheet" href="Home.css">
+       <link rel="stylesheet" href="./Navbar/navbar.css">
+       <link rel="stylesheet" href="./Css/Slider.css">
+       <link rel="stylesheet" href="./Css/Slides.css">
+       <link rel="stylesheet" href="./Css/VideoCards.css">
+       <link rel="stylesheet" href="./Css/google.css">
+       <link rel="stylesheet" href="./Css/AllServices.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    
+<!-- AOS CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <nav>
+    <div class="navbar">
+      <i class='bx bx-menu'></i>
+          <div class="lgoimg"> <img src="./image/MeerLOGO.png" alt="logo" srcset=""></div>
+      <div class="logo"><a href="./index.html">Meer Security</a></div>
+      <div class="nav-links">
+        <div class="sidebar-logo">
+          <span class="logo-name">CodingLab</span>
+          <i class='bx bx-x' ></i>
+        </div>
+        <ul class="links">
+          <li><a href="#">HOME</a></li>
+          <li>
+            <a href="#">ABOUT-US</a>
+            <i class='bx bxs-chevron-down htmlcss-arrow arrow'></i>
+            <ul class="htmlCss-sub-menu sub-menu">
+              <li><a href="./Navbar/Aboutus/Company/Company.html">Company</a></li>
+                        <li><a href="./Navbar/Aboutus/Staf.html">Office Team</a></li>
+                        <li><a href="./Properties/MD.html">Managing Dir</a></li>
+                        <li><a href="./Navbar/Aboutus/Certificates.html">Awards/Cert</a></li>
+                        <li><a href="./Navbar/Aboutus/Website.html">About-Web</a></li>
+                <span><a href="#">More</a>
+                <i class='bx bxs-chevron-right arrow more-arrow'></i>
+              </span>
+                <ul class="more-sub-menu sub-menu">
+                  <li><a href="#">Neumorphism</a></li>
+                  <li><a href="#">Pre-loader</a></li>
+                  <li><a href="#">Glassmorphism</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">SERVICES</a>
+            <i class='bx bxs-chevron-down js-arrow arrow '></i>
+            <ul class="js-sub-menu sub-menu">
+                        <li><a href="./Navbar/Services/Allservices15.html">All Services</a></li>
+                        <li><a href="./Navbar/Services/Guard-Ser.html">Sec Guard</a></li>
+                        <li><a href="./Navbar/Services/Boody-G.html" >Body Guard</a></li>
+                        <li><a href="./Navbar/Services/SSG.html" >SSG Com</a></li>
+                        <li><a href="./Navbar/Services/Scout.html" >Protocol</a></li>
+                        <li><a href="./Navbar/Services/Vehicle.html" >Vehicle</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">VACANCIES</a>
+            <i class='bx bxs-chevron-down js-arrow arrow '></i>
+            <ul class="js-sub-menu sub-menu">
+             <li><a href="/Navbar/Vacencies/Guard.html">Sec Guard</a></li>
+                        <li><a href="./Navbar/Vacencies/BG.html" >Body G</a></li>
+                        <li><a href="./Navbar/Vacencies/HRM.html" >HR Man</a></li>
+                        <li><a href="./Navbar/Vacencies/OS.html" >Op Sup</a></li>
+                        <li><a href="./Navbar/Vacencies/OPM.html" >Op Man</a></li>
+                        <li><a href="./Navbar/Vacencies/Account.html" >Accounted</a></li>
+            </ul>
+          </li>
+         
+          <li><a href="./Navbar/Clints/Clint.html">CLINTS</a></li>
+          <li><a href="./Navbar/Contact/Contact.html">CONT-US</a></li>
+        </ul>
+      </div>
+
+
+    <!-- ✅ Right section: images and logo -->
+    <div class="right-section">
+      <div class="profile-images">
+        <img src="./Cimg/Nadra-logo.png" alt="Profile 1">
+        <img src="./Cimg/APSAA-Logo.png" alt="Profile 2">
+        <img src="./Cimg/CRO-Logo.png" alt="Profile 3">
+        <img src="./Cimg/Pakistan_Army_Emblem.png" alt="Profile 4">
+        <div class="userid" id="user-profile-btn">
+          <img id="user-profile-img" class="user-profile-img" src="" alt="Profile" style="display:none;">
+       
+      </div>
+      
+      </div>
+
+
+  </div>
+      <div class="search-box">
+        <i class='bx bx-search' style="display: none;"></i>
+        <div class="input-box"  >
+          <input type="text" placeholder="Search...">
+        </div>
+</nav>
+
+<!-- !-- Inside your navbar -->
+<div id="user-info" class="user-info">
+    <img id="user-profile-img" class="user-profile-img" src="" alt="Profile" style="display:none;">
+    <span id="user-gmail" class="user-gmail"></span>
+</div>
+
+<!-- Custom Google-style Sign-in Modal -->
+<div id="authModal" class="auth-modal" aria-hidden="true">
+  <div class="auth-card" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <button class="auth-close" aria-label="Close" onclick="AuthUI.close()">✕</button>
+
+    <div class="auth-header">
+      <img src="https://www.gstatic.com/images/branding/product/2x/googleg_64dp.png" alt="" class="g-icon">
+      <h2 id="authTitle">Sign in with Google</h2>
+    </div>
+
+    <div id="authUser" class="auth-user hidden">
+      <img id="authPhoto" class="auth-photo" alt="Profile">
+      <div class="auth-meta">
+        <div id="authName" class="auth-name">Ali Raza</div>
+        <div id="authEmail" class="auth-email">arnstormbreaker@gmail.com</div>
+      </div>
+    </div>
+
+    <button id="authContinue" class="auth-cta" onclick="AuthUI.continue()">
+      Continue as <span id="authFirstName">Ali</span>
+    </button>
+
+    <div id="authHint" class="auth-hint">
+      To continue, Google will share your name, email address, and profile picture with this site.
+      See this site's <a href="/privacy" target="_blank" rel="noopener">privacy policy</a> and
+      <a href="/terms" target="_blank" rel="noopener">Terms of Service</a>.
+    </div>
+
+    <!-- Blue loading line -->
+    <div id="authProgress" class="auth-progress" aria-hidden="true"></div>
+  </div>
+</div>
+
+<video autoplay muted loop class="video-background">
+  <source src="./Cimg/garda-security-usa-ambient.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+   <button type="button">Location</button>
+</video>
+
+<div class="content">
+</div>
+<section class="hero-section">
+  <div class="hero-content">
+    <p class="h7">MEER Security Company Pvt (LTD)</p>
+    <div class="headline-container" id="headlineContainer">The proven alternative to security as you know it</div>
+    <p class="txt">
+      Our people are different. We are raising the bar for the security industry through our unique approach to hiring, training and supporting our security professionals.
+    </p>
+    <a href="./Properties/Location.html" class="hero-btn">
+      <button class="custom-btn btn-12"><span>Locate!</span><span>Where We Are</span></button>
+    </a>
+  </div>
+</section>
+
+  <!-- <p class="lperagraph">Our people are different. We are raising the bar for the security industry through our unique approach to hiring, training and supporting our security professionals.</p> -->
+</div>
+</div>
+<main>
+ <!-- Side Notification -->
+  <br>
+  <br>
+  <br>
+ <!-- Navigation links -->
+<!-- Navbar -->
+<!-- Sign-in Popup -->
+<!-- Navbar Links -->
+<!-- Links (Example) -->
+
+  <div id="signin-popup" style="display:none;">
+    <div style="background:#fff; padding:20px; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.1); width:300px;">
+      <span id="popup-close" style="float:right; cursor:pointer; color:red;">×</span>
+      <img id="popup-img" src="" style="width:50px; height:50px; border-radius:50%;"/>
+      <h4 id="popup-name">Welcome</h4>
+      <p id="popup-email"></p>
+      <button id="popup-continue">Continue as</button>
+      <button id="google-signin-btn" style="display:none;">Sign in with Google</button>
+    </div>
+  </div>
+  <!-- Signin Popup -->
+ 
+
+  <!-- <div class="image-frame">
+    <img src="./imgs/2.jpg" alt="Image 1" class="circle-image small">
+    <img src="./imgs/1.jpg" alt="Image 2" class="circle-image medium">
+    <img src="./imgs/223 3.jpg" alt="Image 3" class="circle-i
+    mage large">
+    <img src="./imgs/M4 Carbine.jpg" alt="Image 4" class="circle-image xlarge">
+  </div> -->
+  <br>            
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+   <div class="container">
+    <div class="subheading">Careers at MEER Security</div>
+    <h1 class="main-heading">We provide better security because</h1>
+    <h2 class="sub-main-heading">we hire people who care</h2>
+    <p class="description">
+      If you are an ambitious person looking for new challenges and opportunities to grow,
+      you have come to the right place. Security is a dynamic industry and we pride ourselves
+      on our high standards and the determination we see in our team members year after year.
+    </p>
+    <a href="./Navbar/Services/Guard-Ser.html" class="btn">Services</a>
+  </div>
+  <section class="client-section">
+  <div class="client-text">
+    <h4 class="label">Client success stories</h4>
+    <h2 class="main-title">We earn our clients’ trust every single day</h2>
+    <p class="client-para">
+      "We have had MEER Security Officers in our facilities for almost a year.
+      We have been completely satisfied with their performance and services provided.
+      The Security Officers are high quality and we have found them to be always alert
+      and ready to respond to any situation. The account management is stellar at all
+      levels and MEER Security has gone to great lengths to ensure we are content with
+      the services they provide. Overall a great partnership with MEER Security."
+    </p>
+    <a href="./Navbar/Clints/Clint.html" class="visit-btn">Visit</a>
+  </div>
+
+  <div class="client-image">
+    <img src="/Cimg/Beretta 92FS.jpeg" alt="Security Guards" />
+  </div>
+</section>
+
+<section class="commitment-section">
+  <div class="commitment-content">
+    <h4 class="commitment-label">Our commitment to service</h4>
+    <p class="commitment-quote">
+      “Our people are what make us different—<br />
+      people who stand out for their consistency,<br />
+      commitment, and character.”
+    </p>
+  </div>
+</section>
+<!-- <a href="./Navbar/Services/Guard-Ser.html"><button class="Book" >Services</button> -->
+</a>
+</div>
+</div>
+</div>
+</div>
+
+<section class="carousel-section">
+  <div class="carousel-track" id="carouselTrack">
+    <div class="carousel-slide">
+      <h2>Facts</h2>
+      <p>MEER Security Services Pvt Ltd has over a decade of proven excellence in delivering customized security solutions to government and private sectors across Pakistan.</p>
+      <a href="/Properties/Facts.html">Explore Our Achievements</a>
+    </div>
+
+    <div class="carousel-slide">
+      <h2>Vision</h2>
+      <p>To become the most trusted and innovative security partner nationwide by consistently setting new standards in safety, reliability, and professionalism.</p>
+      <a href="/Properties/Purpose.html">See Our Future Goals</a>
+    </div>
+
+    <div class="carousel-slide">
+      <h2>History</h2>
+      <p>Established by veterans and industry experts, MEER Security’s journey reflects years of commitment to protecting communities and organizations with pride and precision.</p>
+      <a href="./Navbar/Aboutus/Company/Company.html">Learn Our Journey</a>
+    </div>
+  </div>
+
+  <div class="carousel-dots">
+    <span class="dot active" onclick="showSlide(0)"></span>
+    <span class="dot" onclick="showSlide(1)"></span>
+    <span class="dot" onclick="showSlide(2)"></span>
+  </div>
+</section>
+
+  
+  <!-- <div class="arrow-container">
+    <div class="controls prev"><img class="pr" src="/Cimg/right-arrow (1).png" alt="Previous"></div>
+    <div class="controls next"><img class="ps" src="/Cimg/right-arrow.png" alt="Next"></div>
+  </div>
+  <div class="pause-btn"></div>
+  <div class="timeRunning"></div>
+  <div class="indicators">
+    <div class="indicator active"></div>
+    <div class="indicator"></div>
+    <div class="indicator"></div>
+    <div class="indicator"></div>
+
+  </div>
+  <div class="current-slide">1</div>
+</div> -->
+</div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<section class="section-row">
+  <!-- First Row -->
+  <div class="row-block">
+    <div class="row-img">
+      <img src="./Cimg/MerrHamaza.png" alt="Director Image"/>
+    </div>
+    <div class="row-content">
+      <h2>Managing Director Of Company</h2>
+      <p>
+        Our CEO exemplifies visionary leadership, steering the company toward sustainable growth and innovation.
+        Their strategic approach fosters a culture of collaboration and accountability, driving excellence across all operations.
+      </p>
+      <a href="./Properties/MD.html" class="btn-blue">Read about our Purpose</a>
+    </div>
+  </div>
+
+
+  <!-- Second Row -->
+  <div class="row-block reverse">
+    <div class="row-img">
+      <img src="./Clintsimgs/team.png" alt="Training Image"/>
+    </div>
+    <div class="row-content">
+      <h2>Cultivating a High-Performing Team</h2>
+      <p>
+        We leverage a team of retired military personnel, known for their discipline and expertise. Continuous training enhances
+        performance and aligns with our organizational goals, fostering a skilled and adaptable workforce.
+      </p>
+      <a href="/Navbar/Aboutus/Staf.html" class="btn-blue">See About Our Management</a>
+    </div>
+  </div>
+
+
+
+  <!-- First Row -->
+  <div class="row-block">
+    <div class="row-img">
+      <img src="./Cimg/scout01.png" alt="Director Image"/>
+    </div>
+    <div class="row-content">
+       <h2>Enhancing Skills for Safety</h2>
+      <p>Our comprehensive training programs empower both staff and clients, equipping them with essential skills
+       for success. We prioritize hands-on experience to build confidence and competence in critical situations.
+      </p>
+      <a href="./Properties/Performance.html" class="btn-blue">See About Our Protection</a>
+  </div>
+  <!-- Second Row -->
+  <div class="row-block reverse">
+    <div class="row-img">
+      <img src="./Clintsimgs/Clint.jpeg" alt="Training Image" />
+    </div>
+    <div class="row-content">
+     <h2>Client Success Stories</h2>
+    <p>We are dedicated to enhancing our clients' experience, striving for excellence in every interaction. Their
+       feedback is invaluable in informing our continuous improvement efforts, ensuring we consistently meet 
+       and exceed expectations.</p>
+      <a href="./Navbar/Clints/Clint.html" class="btn-blue">See About Our Clint</a>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <!-- Second Row -->
+  <div class="row-block">
+    <div class="row-img">
+      <img src="./Clintsimgs/graph.png" alt="Training Image"/>
+    </div>
+    <div class="row-content">
+      <h2>Our Success Story</h2>
+      <p>
+        We leverage a team of retired military personnel, known for their discipline and expertise. Continuous training enhances
+        performance and aligns with our organizational goals, fostering a skilled and adaptable workforce.
+      </p>
+      <a href="./Navbar/Aboutus/Certificates.html" class="btn-blue">See About Our Documents</a>
+    </div>
+  </div>
+
+      <!-- First Row -->
+  <div class="row-block reverse">
+    <div class="row-img">
+      <img src="./Cimg/22302.jpg"alt=" Director Image"/>
+    </div>
+    <div class="row-content">
+     <h2>Our Weapons Precision & Power in Every Shot</h2>
+    <p>Our weapons are meticulously engineered for precision and reliability, catering to sectors such as 
+      personal defense and law enforcement. Each product reflects our unwavering commitment to quality, safety,
+       and performance.</p>
+      <a href="./Cards/Locations.html" class="btn-blue">Choose Your Weapon</a>
+    </div>
+  </div>
+
+</section>
+
+<section class="services-section" id="services">
+    <!-- Header Image -->
+     <a href="./Navbar/Services/Allservices15.html">
+    <div class="services-header">
+        <img src="/icons/service (2).png" alt="Our Services">
+        </a>
+    </div>
+
+    <h2 class="services-title">Our Professional Security Services</h2>
+    <p class="services-subtitle">
+        Meer Security Services provides top-class, innovative, and reliable security solutions for your safety.
+    </p>
+
+
+
+
+
+
+
+
+    <div class="services-container">
+        <!-- Service Cards -->
+        <a href="./Navbar/Services/Guard-Ser.html" class="service-card">
+            <div class="icon">
+                <img src="./icons/guard.png" alt="Manned Guarding">
+            </div>
+            <h5>Manned Guarding</h5>
+            <p>Professional trained guards ensuring full-time security and protection.</p>
+        </a>
+
+        <a href="./Navbar/Services/Boody-G.html" class="service-card">
+            <div class="icon">
+                <img src="./icons/security (2).png" alt="VIP Protection">
+            </div>
+            <h5>Close Protection</h5>
+            <p>Dedicated VIP security with discreet and professional protection services.</p>
+        </a>
+
+        <a href="./Navbar/Services/EventSecurity.html" class="service-card">
+            <div class="icon">
+                <img src="./icons/event.png" alt="Event Security">
+            </div>
+            <h5>Event Security Management</h5>
+            <p>Complete security planning & control for small and large-scale events.</p>
+        </a>
+
+        <a href="./Navbar/Services/Scout.html" class="service-card">
+            <div class="icon">
+                <img src="./icons/patrol.png" alt="Mobile Patrols">
+            </div>
+            <h5>Mobile Patrols & Rapid Response</h5>
+            <p>Highly trained patrol units to secure your premises day and night.</p>
+        </a>
+        <a href="./Navbar/Services/Vehicle.html" class="service-card">
+            <div class="icon">
+                <img src="./icons/car.png" alt="Mobile Patrols">
+            </div>
+           <h5>Security Vehicles & Mobile Patrols</h5>
+<p>Fast response and active patrolling to ensure safety and secure transportation.</p>
+
+        </a>
+
+
+        <a href="./Navbar/Services/Sur-Watch.html" class="service-card">
+            <div class="icon">
+                <img src="./icons/24-hours-support.png" alt="Surveillance">
+            </div>
+            <h5>24/7 Surveillance & Monitoring</h5>
+            <p>Real-time surveillance ensuring maximum safety and protection.</p>
+        </a>
+
+        <a href="./Navbar/Services/CCTV.html" class="service-card">
+            <div class="icon">
+                <img src="./icons/cctv.png" alt="CCTV">
+            </div>
+            <h5>CCTV Installation & Monitoring</h5>
+            <p>Smart CCTV solutions with remote monitoring and alerts.</p>
+        </a>
+
+        <a href="./Navbar/Services/Walkie-Talkie.html" class="service-card">
+            <div class="icon">
+                <img src="./icons/walkie-talkie.png" alt="Walkie Talkie">
+            </div>
+            <h5>Walkie-Talkie Communication</h5>
+            <p>Secure and reliable communication systems for teams.</p>
+        </a>
+
+        <a href="./Navbar/Services/Metal-Detector.html" class="service-card">
+            <div class="icon">
+                <img src="./icons/security-gate.png" alt="Metal Detector">
+            </div>
+            <h5>Metal Detector Screening</h5>
+            <p>High-quality detectors ensuring safe and threat-free zones.</p>
+        </a>
+
+        <a href="./Navbar/Services/Access-Control.html" class="service-card">
+            <div class="icon">
+                <img src="./icons/automatic-gate.png" alt="Access Gates">
+            </div>
+            <h5>Access Control Gates</h5>
+            <p>Modern automated gates for maximum access control and safety.</p>
+        </a>
+
+        <a href="./Navbar/Services/Fire-Safety.html" class="service-card">
+            <div class="icon">
+                <img src="./icons/fire-sensor.png" alt="Fire Alarm">
+            </div>
+            <h5>Fire Alarm & Safety Systems</h5>
+            <p>Complete fire detection and prevention systems for safety.</p>
+        </a>
+
+        <a href="./Navbar/Services/GPS-Tracking.html" class="service-card">
+            <div class="icon">
+                <img src="./icons/vehicle-tracking.png" alt="Drone">
+            </div>
+            <h5>GPS Tracking</h5>
+            <p>dvanced GPS solutions for asset, vehicle, and personal tracking with instant updates to ensure safety and security.</p>
+        </a>
+
+        <!-- <a href="cybersecurity.html" class="service-card">
+            <div class="icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" alt="Cybersecurity">
+            </div>
+            <h5>Cybersecurity Solutions</h5>
+            <p>Protecting your digital assets with advanced cybersecurity tools.</p>
+        </a> -->
+    </div>
+</section>
+
+<!-- 
+<div class="Obtainer"><div class="Obtimg"><img src="./Cimg/Beretta 92FS.jpeg" alt="" srcset=""></div><div class="Obttext"><h6>Managing Director Of Company</h6><p>Our CEO exemplifies visionary leadership, steering the company toward sustainable growth and innovation. Their strategic approach fosters a culture of collaboration and accountability, driving excellence across all operations</p><a href="./Properties/MD.html" class="Obtbt"><button class="Obtbt">Read about our Purpose</button></a>
+</div></div>
+
+
+<div class="Odtainer"><div class="Odttext"><h6>Cultivating a High-Performing Team</h6><p>We leverage a team of retired military personnel, known for their discipline and expertise. Continuous training enhances performance and aligns with our organizational goals, fostering a skilled and adaptable workforce.</p><a href="./Navbar/Aboutus/Staf.html" class="Odtbt"><button class="Obtbt">See About Our Managment</button></a></div>
+  <div class="Odtimg"><img src="./Cimg/Beretta 92FS.jpeg" alt="" srcset="">
+</div></div>
+
+
+<div class="Obtainer"><div class="Obtimg"><img src="./Cimg/Beretta 92FS.jpeg" alt="" srcset=""></div><div class="Obttext"><h6>Expert Training for Safety</h6><p>Meer Security Guard Pvt Ltd offers hands-on training programs that equip staff and clients with essential skills for critical situations. Our approach ensures confidence, competence, and readiness in real-world security challenges.</p><a href="/Properties/Performance.html" class="Obtbt"><button class="Obtbt">See About Performance</button></a>
+</div></div>
+
+
+<div class="Odtainer"><div class="Odttext"><h6>Client Success Stories</h6><p>We are dedicated to enhancing our clients' experience, striving for excellence in every interaction. Their feedback is invaluable in informing our continuous improvement efforts, ensuring we consistently meet and exceed expectations.</p><a href="/Navbar/Clints/Clints.html" class="Odtbt"><button class="Obtbt">Visit Our Best</button></a></div>
+  <div class="Odtimg"><img src="./Cimg/Beretta 92FS.jpeg" alt="" srcset="">
+</div></div>
+
+<div class="Obtainer"><div class="Obtimg"><img src="./Cimg/6.png" alt="" srcset=""></div><div class="Obttext"><h6>Enhancing Skills for Safety</h6><p>Our comprehensive training programs empower both staff and clients, equipping them with essential skills for success. We prioritize hands-on experience to build confidence and competence in critical situations.</p><a href="./Admin/Admin.html" class="Obtbt"><button class="Obtbt">First See Then Trust</button></a>
+</div></div>
+
+
+<div class="Odtainer"><div class="Odttext"><h6>Our Weapons Precision & Power in Every Shot</h6><p>Our weapons are meticulously engineered for precision and reliability, catering to sectors such as personal defense and law enforcement. Each product reflects our unwavering commitment to quality, safety, and performance.</p><a href="./Cards/Locations.html" class="Odtbt"><button class="Obtbt">Choose Your Weapon</button></a></div>
+  <div class="Odtimg"><img src="./Cimg/Beretta 92FS.jpeg" alt="" srcset="">
+</div></div> -->
+
+  <!-- <div class="card-container">
+<div class="background-image"></div>
+<div class="card">
+  <a href="./Navbar/Aboutus/Company/Hamza.html">
+    <img src="./imgs/Bullets 3.png" alt="Clickable Image" class="clickable-image">
+    <h1>Our Strategy</h1> 
+</a>
+<p>Our Max Staf From Army Officers & Soldiers,IT Department Always Connect with Our Clints For Ready To Give Them Backup Anytime</p>
+</div> -->
+<div>
+<div class="meer-sgc-wrapper">
+
+  <!-- === STRATEGY SECTION === -->
+  <section class="meer-section meer-bg-gray meer-rounded">
+    <div class="meer-text-center meer-mb-12" data-aos="fade-down">
+      <h2 class="meer-heading">Our Strategy to Protect What Matters</h2>
+      <p class="meer-subtext">Integrated security built on experience, vigilance, and quick response.</p>
+    </div>
+    <div class="meer-grid" data-aos="fade-up">
+      <div class="meer-box">
+        <div class="meer-icon">🛡️</div>
+        <h3 class="meertit">Prevention</h3>
+        <p>Risk assessments and visible presence to deter threats.</p>
+      </div>
+      <div class="meer-box">
+        <div class="meer-icon">👁️</div>
+        <h3 class="meertit">Surveillance</h3>
+        <p>Continuous monitoring with latest tech and trained guards.</p>
+      </div>
+      <div class="meer-box">
+        <div class="meer-icon">🚨</div>
+        <h3 class="meertit">Response</h3>
+        <p>Immediate and smart actions to handle incidents.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- === VALUES SECTION === -->
+  <section class="meer-section meer-bg-white meer-rounded">
+    <div class="meer-text-center meer-mb-12" data-aos="fade-down">
+      <h2 class="meer-heading">What We Stand For</h2>
+      <p class="meer-subtext">Core values that guide every action we take</p>
+    </div>
+    <div class="meer-grid meer-3-col" data-aos="fade-up">
+      <div class="meer-card">💼 Professionalism</div>
+      <div class="meer-card">🔐 Integrity</div>
+      <div class="meer-card">⚖️ Accountability</div>
+      <div class="meer-card">🤝 Commitment</div>
+      <div class="meer-card">📢 Transparency</div>
+      <div class="meer-card">🧭 Leadership</div>
+    </div>
+  </section>
+
+  <!-- === HISTORY SECTION === -->
+  <section class="meer-section meer-bg-light meer-rounded">
+    <div class="meer-text-center meer-mb-12" data-aos="fade-down">
+      <h2 class="meer-heading">Our Journey Since 2005</h2>
+      <p class="meer-subtext">Proudly serving and growing with our clients</p>
+    </div>
+    <div class="meertimeline" data-aos="fade-up">
+      <div>
+        <h7 class="meertit">2005 - Company Founded</h7>
+        <p>Started with a mission to redefine security services in the private sector.</p>
+      </div>
+      <div>   
+        <h7 class="meertit">2014 - First Corporate Contract</h7>
+        <p>Secured our first multinational client for 24/7 on-site security.</p>
+      </div>
+      <div>
+        <h7 class="meertit">2018 - Expansion</h7>
+        <p>Opened 3 more regional offices and expanded services nationwide.</p>
+      </div>
+      <div>
+        <h7 class="meertit">2025 - Tech Integration</h7>
+        <p>Launched smart monitoxring systems and AI-assisted reporting tools.</p>
+      </div>
+    </div>
+  </section>
+
+
+</div>
+</div>
+
+<!-- 
+<div class="card">
+  <a href="./Navbar/Aboutus/Staf.html">
+    <img src="./imgs/M4 Carbine.jpg" alt="Clickable Image" class="clickable-image">
+    <h1>Our Values</h1>
+</a>
+<p>Our Max Staf From Army Officers & Soldiers,IT Department Always Connect with Our Clints For Ready To Give Them Backup Anytime</p>
+</div>
+
+
+<div class="card">
+  <a href="">
+    <img src="./imgs/M4 Carbine.jpg" alt="Clickable Image" class="clickable-image">
+    <h1>Our History</h1>
+  </a>
+  <p class="cpr">With a proactive approach and constant monitoring, we create a secure environment that allows you to focus on what matters most.</p>
+</div> -->
+<!-- 
+<div class="card">
+  <a href="../Hammaz-&-israel-War/Hammaz-Attack-On-Israel.html">
+    <img src="./Cimg/Ferhan01.png" alt="Clickable Image" class="clickable-image">
+    <h1>Clints</h1>
+  </a>
+  <p>Join the many satisfied clients who trust us for their security needs, knowing they are in safe hands</p>
+</div>
+
+<div class="card">
+  <a href="./Cards/Locations.html">
+    <img src="./imgs/DMR.jpg" alt="Clickable Image" class="clickable-image">
+    <h1>Weapons</h1>
+  </a>
+  <p>We utilize state-of-the-art weapon systems that ensure optimal safety and security, giving you the assurance you need in any environment</p>
+</div>
+<div class="card">
+  <a href="../Hammaz-&-israel-War/Hammaz-Attack-On-Israel.html">
+    <img src="./Cimg/6.png" alt="Clickable Image" class="clickable-image">
+    <h1>Training</h1>
+  </a>
+  <p>Our Highly Trained Security Personnel are dedicated to ensuring your safety & give you peace of mind To protect you & your Assets</p>
+</div> -->
+</div> 
+</main>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<!-- Second Frame with Circular Images and Counts -->
+
+
+  <div class="frame">
+    <div class="image-container">
+      <div class="image">
+        <img class="fimg" src="./icons/reputation.png" alt="Plate Icon">
+        <div class="count" id="count1">25</div>
+        <h2>Years of Experience</h2>
+        
+      </div>
+      <div class="image">
+        <img  class="fimg" src="./icons/costumer (1).png" alt="Heart Icon">
+        <div class="count" id="count2">220</div>
+        <h2>Clints</h2>
+      </div>
+      <div class="image">
+        <img class="fimg" src="./icons/gps.png" alt="Graduation Icon">
+        <div class="count" id="count3">300</div>
+        <h2>Locations</h2>
+      </div>
+      <div class="image">
+        <img class="fimg" src="./icons/security.png" alt="Medical Icon">
+        <div class="count" id="count4">550</div>
+        <h2>Guards-Crew</h2>
+      </div>
+    </div>
+  </div>
+    <h1 class="video-heading">Company Review</h1>
+
+ <div class="video-container">
+  <div class="video-card">
+    <div class="video-frame">
+      <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen></iframe>
+    </div>
+    <div class="video-text">
+      <h2 class="video-title">Management Departent</h2>
+      <p class="video-subtitle">Introduction to Security Protocols</p>
+    </div>
+  </div>
+  <div class="video-card">
+    <div class="video-frame">
+      <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen></iframe>
+    </div>
+    <div class="video-text">
+      <h2 class="video-title">EMploye</h2>
+      <p class="video-subtitle">Job Experiance & Loaylity</p>
+    </div>
+  </div>
+  <div class="video-card">
+    <div class="video-frame">
+      <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen></iframe>
+    </div>
+    <div class="video-text">
+      <h2 class="video-title">Clint</h2>
+      <p class="video-subtitle">About Service & Protocol</p>
+    </div>
+  </div>
+  <!-- Repeat .video-card -->
+</div>
+
+
+
+
+
+      <!-- Footer Section -->
+      <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="./image/MeerLOGO.png" alt="Logo">
+                <span class="footer-text">
+                  <span class="m">MEER Security Company Pvt(LTD)</span>
+              </span>
+            </div>
+            <div class="social-icons">
+              <a href="./Navbar/Contact/Contact.html"><img src="./icons/whatsapp (2).png" alt="Whatsapp"></a>
+
+                <a href="https://www.facebook.com/p/Meer-Security-Services-pvt-Ltd-100054629641072/" target="_blank"><img src="./icons/facebook (1).png" alt="Facebook"></a>
+
+                <a href="https://www.instagram.com/arn_stormbreaker/?hl=en" target="_blank"><img src="./icons/instagram (1).png" alt="Instagram"></a>
+                
+                <a href="https://www.twitter.com" target="_blank"><img src="./icons/twitter (1).png" alt="Twitter"></a>
+                <a href="https://www.linkedin.com" target="_blank"><img src="./icons/linkedin (2).png" alt="LinkedIn"></a>
+                <!-- <a href="https://github.com/ALIRAZANAREJO" target="_blank"><img src="./icons/github (2).png" alt="Github"></a> -->
+            </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="safety-instructions">
+            At Meer Security Company Pvt Ltd, we are committed to providing unparalleled security solutions tailored to meet the unique needs of our clients. Our dedicated team of professionals, equipped with advanced technology and extensive training, ensures that your safety is our top priority. As we continue to innovate and adapt in an ever-changing environment, we invite you to partner with us for reliable protection and peace of mind. Thank you for choosing Meer Security; together, we can create a safer future for you and your community.
+          </p>
+          <p class="copyright">
+              Copyright ©2024 Infospace Holdings LLC, A System1 Company. All Rights Reserved. The material on this site cannot be reproduced, distributed, transmitted, cached, or otherwise used, except with prior written permission of Answers.
+          </p>
+      </div>
+  </footer> 
+  
+ 
+   <!-- whatsapp api https://api.whatsapp.com/send?phone=923432983432&text= -- -->
+        
+
+<!-- <script type="module" src="./Palestine.js"></script>
+<script type="module" src="../H2/H2.js"></script>
+<script type="module" src="../H2/H4.js"></script> -->
+      <!--=============== MAIN JS ===============-->
+      <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+
+
+      <div id="signin-popup" style="display:none;">
+        <div style="background:#fff; padding:20px; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.1); width:300px;">
+          <span id="popup-close" style="float:right; cursor:pointer; color:red;">×</span>
+          <img id="popup-img" src="" style="width:50px; height:50px; border-radius:50%;"/>
+          <h4 id="popup-name">Welcome</h4>
+          <p id="popup-email"></p>
+          <button id="popup-continue">Continue as</button>
+          <button id="google-signin-btn" style="display:none;">Sign in with Google</button>
+        </div>
+      </div>
+
+<!--     
+      <script>
+  AOS.init({
+    duration: 800,
+    offset: 120,
+    easing: 'ease-in-out',
+    once: true
+  });
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script> -->
+
+<!-- AOS JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+
+      <!-- Firebase Scripts -->
+      <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+
+      <script type="module" src="Js/AllServices.js"></script>
+      <script type="module" src="Js/Headline.js"></script>
+  <script src="./js/Slides.js" defer></script>
+  <script src="./js/google.js" defer></script>
+<!-- <script type="module" src="./Js/Slider.js"></script> -->
+<script type="module" src="./Count.js"></script>
+      <script src="Search.js"></script>
+  <script src="./Buckit/Navbaar.js"></script>
+
+</body>
+</html>
