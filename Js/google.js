@@ -1,15 +1,14 @@
 // ================= Firebase Config =================
-const firebaseConfig = {
-  apiKey: "AIzaSyABmS9gvQF9OjgF2Aj3M5B3QjNW0DHIVmc",
-  authDomain: "meer-security.firebaseapp.com",
-  databaseURL: "https://meer-security-default-rtdb.firebaseio.com",
-  projectId: "meer-security",
-  storageBucket: "meer-security.firebasestorage.app",
-  messagingSenderId: "335010941797",
-  appId: "1:335010941797:web:ffc86d361cc03592bd2f8c",
-  measurementId: "G-EJ9LS3CR57"
-};
-
+  const firebaseConfig = {
+    apiKey: "AIzaSyABmS9gvQF9OjgF2Aj3M5B3QjNW0DHIVmc",
+    authDomain: "meer-security.firebaseapp.com",
+    databaseURL: "https://meer-security-default-rtdb.firebaseio.com",
+    projectId: "meer-security",
+    storageBucket: "meer-security.firebasestorage.app",
+    messagingSenderId: "335010941797",
+    appId: "1:335010941797:web:ffc86d361cc03592bd2f8c",
+    measurementId: "G-EJ9LS3CR57"
+  };
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 
