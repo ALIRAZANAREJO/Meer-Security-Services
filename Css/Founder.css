@@ -1,0 +1,70 @@
+  .meer-founder-portfolio {
+    font-family: 'Segoe UI', sans-serif;
+    padding: 3rem;
+    background-color: #f9fafb;
+    color:  #00337f;
+  }
+
+  .meer-founder-hero {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .meer-founder-info {
+    max-width: 50%;
+  }
+
+  .meer-founder-name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .meer-founder-title {
+    font-size: 1.2rem;
+    color:  #00337f;
+    margin: 0.5rem 0;
+  }
+
+  .meer-founder-bio {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .meer-founder-slideshow {
+    width: 45%;
+    max-height: 400px;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: relative;
+  }
+
+  .meer-slide-container {
+    display: flex;
+    width: 300%; /* 3 images in one row */
+    animation: slide-animation 12s infinite ease-in-out;
+  }
+
+  .meer-slide {
+    width: 33.33%;
+    flex-shrink: 0;
+  }
+
+  .meer-slide-img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    object-fit: cover;
+  }
+
+  @keyframes slide-animation {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+  }
+
+  /* Rest of the styles for content, strengths, aim, etc. remain the same */

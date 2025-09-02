@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Entry</title>
+    <link rel="stylesheet" href="T.css">
+    <link rel="stylesheet" href="./Css/resContainer.css">
+
+</head>
+<body>
+   
+    <!-- <div class="form" id="Data"> -->
+        <div class="Apply-Form">
+            <div class="circle-image-input" id="circleInput">
+                <input type="file" id="ImageUpload" accept="image/*" />
+                <img id="profileImage" src="" alt="Profile Image" required onchange="updateFileName()" />
+            </div>
+            <h3>Apply For Guard</h3>
+            
+                  <div class="input-container">
+      <input  type="text" id="Name" placeholder="Name" required>
+        <input type="text" id="Fname" placeholder="Father Name" required>
+        <input type="number" id="Dob" placeholder="Date Of Birth" required>
+        <input type="number" id="Cnic" placeholder="CNIC-No" required>
+        <input type="number" id="Phone" placeholder="Phone-No" required>
+        <input type="text" id="Caddres" placeholder="Current Addres" required>
+        <input type="text"  id="Paddres" placeholder="Permenent Addres" required>
+        <input type="text"  id="Qual" placeholder="Qualification" required>
+    </div>
+    
+    
+        <select style="display: none;" id="containerSelect">
+            <option style="display: none;" value="resContainer2">resContainer2</option>
+           
+        </select>
+        
+<!-- <label class="custom-file-upload">
+            <input class="bts" type="file" id="ImageUpload" accept="image/*" required onchange="updateFileName()">
+        </label>
+        <span id="fileNameDisplay"></span> -->
+        <!-- <img id="uploadedImage" style="display:none;"/> -->
+        <button id="Insbtn" onclick="InsertData()">Submit</button>
+        <!-- <button onclick="SelectDataByName()">Select</button>
+        <button id="Updbtn"  onclick="UpdateData()">Update</button>
+        <button id="Delbtn"  onclick="DeleteData()">Delete</button> -->
+    </div>
+    <!-- <a href="Print.html">View Cards</a> -->
+
+    <!-- <div id="resContainer"></div> -->
+    <!-- <div id="resContainer2"></div> -->
+    </div>
+</div>  
+
+  <script type="module" src="T.js"></script>
+  <script src="Profile.js"></script>    
+</body>
+</html>
+
+
+
+<!-- 
+<select id="Category">
+    <option value="" disabled>Select a category</option>
+    <option value="Pakistani">Pakistani</option>
+    <option value="Chines">Chines</option>
+    <option value="American">American</option>
+    <option value="Italian">Italian</option>
+</select> -->

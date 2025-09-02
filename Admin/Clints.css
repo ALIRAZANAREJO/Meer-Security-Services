@@ -1,0 +1,110 @@
+body{
+    align-items: center;
+    text-align: center;
+
+
+}
+.AdminPannel{
+    align-items: center;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-left: 4vw;
+    margin-top: 200px;
+}
+.Clints{
+    width: 20vw;
+    height: 200px;
+    border-radius: 25px;
+    color: white;
+    background: linear-gradient(-70deg, #0003b8e0,#8fc3ff);
+    text-decoration: none;
+    transition: 0.5s;
+
+
+}
+
+
+.Clint02{
+    width: 20vw;
+    height: 200px;
+    border-radius: 25px;
+    color: white;
+    background: linear-gradient(-70deg, #ff3075, #ff9cca);
+    text-decoration: none;
+    transition: 0.5s;
+
+}
+
+.Clint03{
+    width: 20vw;
+    height: 200px;
+    border-radius: 25px;
+    color: white;
+    background: linear-gradient(-70deg, #00e6ac, #d2fff1);
+    text-decoration: none;
+    transition: 0.5s;
+
+}
+
+.Clint04{
+    width: 20vw;
+    height: 200px;
+    border-radius: 25px;
+    color: white;
+    background: linear-gradient(-70deg, #ffa600, #ffde84);
+    text-decoration: none;
+    transition: 0.5s;
+
+}
+.Clints:hover{
+    scale: 1.1;
+}
+.Clint02:hover{
+    scale: 1.1;
+}
+.Clint03:hover{
+    scale: 1.1;
+}
+.Clint04:hover{
+    scale: 1.1;
+}
+.icimg{
+    width: 40px;
+    margin-left: 50px;
+} 
+.TotalApplication{
+    font-size: 4vw;
+    margin-left: 13vw;
+    margin-top: -30px;
+
+}
+/* 
+.loading-circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+.loading-circle svg {
+    transform: rotate(-90deg);
+}
+.loading-circle circle {
+    fill: none;
+    stroke-width: 10;
+}
+.background {
+    stroke: #e6e6e6;
+}
+.progress {
+    stroke: #4caf50;
+    transition: stroke-dasharray 0.5s ease;
+}
+.count-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    text-align: center;
+} */

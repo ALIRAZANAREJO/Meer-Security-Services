@@ -1,0 +1,483 @@
+.sd{
+    margin-left: 23.8vw;
+    margin-top: -2.6vw; /* Adjust this based on the navbar height */
+  }
+  
+  .hd3 {
+    font-size: 2.5vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2c2c2c; /* Slightly gray color */
+    font-weight: 600; 
+  
+  }
+  .Pp{
+    margin-left: 23.8vw;
+    margin-top: 2.6vw; /* Adjust this based on the navbar height */
+  }
+  
+  .hd4 {
+    font-size: 2.5vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2c2c2c; /* Slightly gray color */
+    font-weight: 600; 
+  
+  }
+    .card-container {
+      position: relative; 
+      z-index: 1;
+      margin-left: 1vw;
+  
+    }
+  
+  
+  .card {
+    width: 18vw; /* Card width */
+    height: 16vw; /* Fixed height for the card */
+    border: 1px solid #ccc; /* Optional border */
+    background-color: white;
+    border-radius: 0.8vw; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    scroll-snap-align: start; /* Align cards to the start of the container */
+    transition: transform 0.3s ease; /* Smooth transition */
+    position: relative;
+  }
+  
+  .image-container {
+    height: 65%; /* Set height to 70% of the card */
+    overflow: hidden; /* Hide overflow from image zoom */
+  }
+  
+  .card img {
+      width: 100%; /* Full width of the image area */
+      height: 100%; /* Full height of the image area */
+      object-fit: cover; /* Cover the specified area without stretching */
+      transform-origin: center; /* Center the scaling */
+      border-top-left-radius: 0.8vw;
+      border-top-right-radius:0.8vw;
+      transition: transform 0.3s ease;
+  }
+  
+  .card:hover .image-container .imagen {
+      transform: scale(1.02); /* Enlarge the image on hover */
+  }
+  
+  .text-area {
+      height: 30%; /* Set height to 30% of the card */
+      padding: 1vw; /* Add some padding */
+      display: flex; /* Flexbox for alignment */
+      flex-direction: column; /* Column layout */
+      justify-content: center; /* Center content vertically */
+  }
+  
+  h1, p {
+      margin: 0; /* Remove default margin */
+  }
+  
+  
+  .carousel-container {
+    display: flex; /* Flexbox for layout */
+    position: relative; 
+    width: 70%; /* Full width */
+    max-width: 40vw; /* Set a max width for the carousel */
+    margin: auto; /* Center the carousel */
+  }
+  
+  /* #resContainer {
+    display: flex; 
+    overflow: hidden;
+    width: calc(73% - 10px);
+    scroll-behavior: smooth; 
+    overflow-y: hidden;
+    margin-top: -12vw;
+    margin-left:22.5vw;
+    gap: 0.2vw
+    ;
+  } */
+  #resContainer {
+    display: flex; 
+    overflow: hidden;
+    width: calc(73% - 10px);
+    scroll-behavior: smooth; 
+    overflow-y: hidden;
+    margin-top: -12vw;
+    margin-left:22.5vw;
+    gap: 0.2vw
+    ;
+  }
+  #resContainer2 {
+    display: flex; 
+    overflow: hidden;
+    width: calc(73% - 10px);
+    scroll-behavior: smooth; 
+    overflow-y: hidden;
+    margin-top: -11vw;
+    margin-left:22.5vw;
+    gap: 0.2vw
+    ;
+  }
+  #resContainer3 {
+    display: flex; 
+    overflow: hidden;
+    width: calc(73% - 10px);
+    scroll-behavior: smooth; 
+    overflow-y: hidden;
+    margin-top: -10vw;
+    margin-left:22.5vw;
+    gap: 0.2vw
+    ;
+  }
+  
+  
+  .carousel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 76.5%;
+    position: relative;
+    transform: translateY(-50%);
+    z-index: 10; /* Ensure Arrws are above cards */
+    left: 20.2%; /* Align to the left */
+    right: 0; /* Align to the right */
+    margin-top: 10vw;
+  }
+  
+  .Arrw{
+    background-color: rgb(255, 255, 255); /* Transparent background */
+    border: none; /* No border */
+    border-radius: 50%; /* Circular shape */
+    width: 3.5vw; /* Width of the Arrw button */
+    height: 3.5vw; /* Height of the Arrw button */
+    cursor: pointer; /* Pointer cursor */
+    display: flex; /* Flexbox for centering */
+    border: 1px solid rgb(185, 185, 185); /* Black border */
+    transition: background-color 0.3s; 
+  } 
+    
+  .Arrw:hover {
+    background-color: rgba(233, 233, 233, 0.87);
+    transform: scale(1.1);
+  }
+  
+    
+  .Arrw img{
+    width: 1.8vw;
+    height: 1.8vw;
+    padding-top: 8px;
+    padding-left: 3px;
+  }
+  
+  #leftArrw{
+    margin-top: -1vw;
+  }
+  .form-container {
+    position: relative; /* Ensure this is positioned */
+    z-index: 1; /* Set a lower z-index */
+  }
+  
+    
+    .discount {
+        background-color: #ff5a5f; /* Discount color */
+        color: white;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    
+    .offer-badgss,
+    .gift-badgss {
+      position: absolute;
+      color: white;
+      padding: 0.3vw;
+      border-radius: 5px;
+    }
+    
+  
+  .offer-badgss img{
+    width: 1vw;
+    height: 1vw;
+  }
+  .gift-badgss img{
+      width: 1vw;
+      height: 1vw;
+  }
+  .disss{
+      font-size: 0.9vw;
+      margin-left: 1.4vw;
+      margin-top: -1.15vw; 
+  }
+    
+  .gift-badgss, .offer-badgss {
+    height: 1.4vw;
+    background-color: #f8317d;
+    color: white; /* Text color */
+    padding: 0.2vw 0.7vw; 
+    border-radius:0.6vw; /* Rounded corners */
+    width: fit-content; /* Adjust width based on content */
+    font-size:0.95vw; /* Adjust font size as needed */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600; 
+    margin-top: -9.5vw;
+    left: 0.4vw; 
+  }
+  
+  .offer-badgss{
+  margin-top: 0.7vw;
+  left: 0.1vw;
+  }
+  
+  .disss {
+    white-space: nowrap; /* Prevents text from wrapping */
+  }
+    .rating {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+    
+    
+      .card1-content {
+        padding: 0.8vw;
+       
+      }
+      
+      .card1-title {
+        font-size: 1.1vw;
+        font-weight: 500;
+        font-weight: bold;
+        color: #181818;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        margin: 0;
+      }
+      
+      .card-rating {
+        display: flex;
+        margin-left: 11vw;
+        margin-top: -0.2vw;
+      }
+    
+      .star {
+        width: 0.8vw;
+        height: 0.8vw;
+        fill: rgb(255, 174, 0); /* Fill color */
+        stroke: rgb(255, 94, 0); /* Outline color */
+        stroke-width: 3; /* Increased outline thickness */
+        margin-left: 10.1vw;
+        margin-bottom: 1.3vw;
+        margin-top: -1.0vw;
+    }
+    
+      .rating {
+        font-size: 0.95vw;
+        font-family:Arial, Helvetica, sans-serif;
+        margin-left: 0.5vw;
+        color: #3d3d3d;
+        font-weight:bold;
+        margin-top: -3.7vw;
+        }
+      
+      .reviews {
+        font-size: 0.92vw;
+        margin-left: 0.1vw;
+        font-family:Arial, Helvetica, sans-serif;
+        color: #888;
+        margin-top: -2.3vw;
+  
+      }
+      
+      .Price {
+       font-size: 0.9vw;
+       color: #555;
+      }
+      .Dish{
+        font-size: 0.8vw;
+        color: #7e7e7e;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        margin-top: -0.5vw;
+        margin-left: -0.2vw;
+      }
+      .delivery-info {
+        display: flex;
+        align-items: center;
+        margin-top: 0.5vw;
+      }
+      
+      .delivery-info .time {
+        width: 1vw;
+        height:1vw;
+     
+    
+      }
+      .delivery-info .card-time {
+        font-size: 0.9vw;
+        color: #7a7a7a;
+        margin-left: 0.5vw;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-display: bold;
+        
+    
+      }
+      .delivery-info .bike-icon {
+        width: 1vw; /* Adjust size as needed */
+        height: 1vw;
+        margin-left: 0.5vw;
+      }
+     .delivery-info .Free{
+      font-size: 0.9vw;
+      color: rgb(236, 0, 118);
+        font-weight: 500;
+        font-display: bold;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        padding-left: 0.5vw;
+      }
+      
+    
+      
+    
+      
+     @media (max-width: 400px) {
+        .card {
+            width: calc(20% - 10px);
+            height: auto; 
+        }
+    } 
+    
+    @media (max-width: 327px) {
+        .card {
+          width: calc(20% - 10px);
+            min-width: 75vw;
+            height: auto;
+            
+        }
+        
+        .carousel-container {
+          display: flex; /* Flexbox for layout */
+          align-items: center; /* Center items vertically */
+          position: relative; /* Position for Arrws */
+        }
+        .card-container {
+          display: flex; /* Horizontal layout for cards */
+          overflow-x: hidden; /* Hide overflow */
+          width: calc(100% - 150px); /* Adjust width for Arrws */
+          scroll-behavior: smooth; /* Smooth scrolling */
+        }
+    
+        .image-container {
+          position: relative;
+          overflow: hidden;
+          width: 240px;
+          height: 140px;
+        }
+        
+        
+        .imagen {
+          width: 240px;
+          height: 130px;
+          transition: transform 0.3s ease; /* Smooth transition */
+        }
+        
+        .card:hover .imagen {
+          transform: scale(1.05);
+        }
+        .card-content {
+          padding: 8px; 
+        }
+        
+    }
+    
+    @media (max-width: 400px) {
+      .card {
+          width: 200px; /* Adjust card width for mobile */
+      }
+    
+      .Arrw {
+          width: 30px; /* Smaller Arrws for mobile */
+          height: 30px; /* Smaller Arrws for mobile */
+          font-size: 16px; /* Smaller font size for Arrws */
+      }
+    }
+  
+  
+  
+  
+  
+  
+  /* body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+  } */
+  /* 
+  #cardContainer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+  }
+  
+  .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      position: relative;
+      width: 250px;
+  }
+  
+  .card-img {
+      width: 100%;
+      border-radius: 8px;
+  }
+  
+  .card h3, .card h4, .card h5, .card h6 {
+      margin: 10px 0;
+  }
+  
+  .options-menu {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+  }
+  .dots {
+      cursor: pointer;
+      font-size: 24px;
+  }
+  
+  .menu {
+      width: 80px;
+      height: 80px;
+      display: none;
+      position: absolute;
+      top: 30px;
+      right: 0;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+  }
+  
+  .menu button {
+      background: none;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      width: 100%;
+      height: 40px;
+      text-align: left;
+  }
+  
+  .menu button:hover {
+      background-color: #f0f0f0;
+  }
+  .options div {
+      padding: 10px;
+      cursor: pointer;
+  }
+  
+  .options div:hover {
+      background: #f0f0f0;
+  } */
+  

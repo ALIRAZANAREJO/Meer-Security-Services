@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Future Vision - Meer Security Guard Pvt Ltd</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f7f8fa;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #3b82f6;
+      margin-bottom: 2rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 1rem;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .intro h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .intro p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      max-width: 800px;
+      margin: 0 auto;
+      color: #555;
+    }
+
+    .growth-plan {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 4rem;
+    }
+
+    .growth-plan div {
+      width: 22%;
+      background-color: #fff;
+      padding: 2rem;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease-in-out;
+    }
+
+    .growth-plan div.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .growth-plan div h3 {
+      font-size: 1.5rem;
+      color: #3b82f6;
+      margin-bottom: 1rem;
+      animation: fadeIn 1s ease-out;
+    }
+
+    .growth-plan div p {
+      font-size: 1.1rem;
+      color: #777;
+    }
+
+    /* Progress Bar */
+    .progress {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 5rem;
+      text-align: center;
+    }
+
+    .progress div {
+      width: 100%;
+      background-color: #e0e0e0;
+      height: 30px;
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .progress-bar {
+      width: 10%;
+      height: 100%;
+      background-color: #3b82f6;
+      animation: grow 3s ease-in-out forwards;
+    }
+
+    @keyframes grow {
+      0% { width: 0%; }
+      100% { width: 100%; }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .progress p {
+      position: absolute;
+      top: 5px;
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .growth-plan {
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .growth-plan div {
+        width: 90%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .growth-plan div {
+        width: 100%;
+      }
+
+      .progress-bar {
+        animation-duration: 5s;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Introduction Section -->
+    <div class="intro">
+      <h2>Our Vision for the Future</h2>
+      <p>At Meer Security Guard Pvt Ltd, we have set ambitious goals for the future. Starting from a team of just 50 guards, our journey has been remarkable, and we are committed to scaling up to meet the growing demand for high-quality security services. Here’s a look at our growth plan and vision for the next decade.</p>
+    </div>
+
+    <!-- Growth Plan Section -->
+    <div class="growth-plan">
+      <div class="growth-card">
+        <h3>Our Humble Beginnings</h3>
+        <p>We started with just 50 guards, providing exceptional service and building a reputation for trust and reliability.</p>
+      </div>
+
+      <div class="growth-card">
+        <h3>Present Day</h3>
+        <p>Now, we have expanded our crew to over 500 highly trained professionals, covering a variety of sectors with unparalleled service.</p>
+      </div>
+
+      <div class="growth-card">
+        <h3>The Path Forward</h3>
+        <p>Our goal is to scale to 5,000 highly trained security guards, enabling us to meet the security needs of any business or industry across the nation.</p>
+      </div>
+
+      <div class="growth-card">
+        <h3>Expanding Nationwide</h3>
+        <p>As we grow, our reach will extend nationwide, ensuring that every region can rely on our top-tier security services, 24/7.</p>
+      </div>
+    </div>
+
+    <!-- Progress Bar Section -->
+    <div class="progress">
+      <div class="progress-bar"></div>
+      <p>We have grown 10% towards our goal of 5,000 guards!</p>
+    </div>
+  </div>
+
+  <script>
+    // Animate growth cards on scroll
+    const growthCards = document.querySelectorAll('.growth-card');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, { threshold: 0.5 });
+
+    growthCards.forEach(card => observer.observe(card));
+  </script>
+
+</body>
+</html>

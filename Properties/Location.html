@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meer Security Company Pvt Map</title>
+  <style>
+    :root {
+      --primary: #001f4d;
+      --accent: #ffffff;
+      --marker: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+      overflow-x: hidden;
+      background-color: var(--primary);
+      color: var(--accent);
+    }
+
+    .main-layout {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+      gap: 2rem;
+    }
+
+    .text-section {
+      flex: 1;
+      min-width: 280px;
+      padding: 1.5rem;
+      animation: slideInLeft 1.2s ease forwards;
+    }
+
+    .text-section h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .text-section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      max-width: 500px;
+    }
+
+    .google-map-btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.6rem 1.2rem;
+      display: inline-block;
+    background-color: white;
+    color:  #001f4d;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: 3px solid   #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: fit-content;
+    }
+
+  .google-map-btn:hover {
+    background-color: #001f4d;
+    color: white;
+    border-color: #ffffff;
+    }
+
+
+     /* .btn{
+    display: inline-block;
+    background-color:  #001f4d;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: 2px solid  #2e3eff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: fit-content;
+    }
+  
+  
+    .google-map-btn:hover{
+    background-color: #ffffff;
+    color: #2e3eff;
+    border-color: #2e3eff;
+    }   */
+
+
+    .maplogo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      position: absolute;
+      top: 20px;
+      left: 60px;
+      z-index: 999;
+    }
+
+    .map-section {
+      position: relative;
+      flex: 1;
+      min-width: 280px;
+      max-width: 600px;
+      animation: slideInRight 1.2s ease forwards;
+    }
+
+    .map-section img {
+      width: 100%;
+      border-radius: 12px;
+      height: auto;
+      margin-left: 32px;
+    }
+
+    .location {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0);
+      color: var(--primary);
+      padding: 0.3rem 0.6rem;
+      border-radius: 10px;
+      font-size: 0.7rem;    
+      font-weight: bold;
+      transform: translate(-50%, -50%);
+      animation: popIn 1s ease forwards;
+      white-space: nowrap;
+    }
+
+    .location i {
+      margin-right: 2px;
+      
+    }
+    .location a {
+      margin-right: 2px;
+      color:  #001f4d;
+      
+    }
+
+    /* Location positions */
+    .pak { top: 50%; left: 43%; }
+    .sin { top: 65%; left: 45%; }
+    .pun { top: 40%; left: 67%; }
+    .bal { top: 60%; left: 20%; }
+    .kpk { top: 17%; left: 70%; }
+    .gb { top: 10%; left: 70%; }
+    .kash { top: 27%; left: 80%; }
+    .kar { top: 86%; left: 43%; }
+    .hyd { top: 78%; left: 45%; }
+    .mir { top: 72%; left: 40%; }
+    .that { top: 83%; left: 53%; }
+    .lhr { top: 46%; left: 70%; }
+    .fsd { top: 54%; left: 65%; }
+    .guj { top: 36%; left: 70%; }
+    .bah { top: 58%; left: 57%; }
+    .mult { top: 49%; left: 58%; }
+    .rwp  { top: 32%; left: 68%; }
+    .isb { top: 33%; left: 30%; }
+    .que { top: 48%; left: 38%; }
+    .gaw { top: 79%; left: 12%; }
+    .tur { top: 75%; left: 17%; }
+    .chm { top: 45%; left: 45%; }
+    .orm  { top: 57%; left: 33%; }
+    .khar  { top: 57%; left: 33%; }
+    .orm { top: 78%; left: 27%; }
+    .wash { top: 68%; left: 30%; }
+    .taf { top: 59%; left: 11%; }
+    .pesh { top: 23.5%; left: 65%; }
+    .suk { top: 66%; left: 80%; }
+    .skr { top: 14%; left: 80%; }
+
+
+    .pak{
+        font-size: 30px;
+        color: #001f4d;
+        background-color: white;
+    }
+    .sin{
+        font-size: 20px;
+        color: #001f4d;
+        background-color: white;
+    }
+    .pun{
+        font-size: 20px;
+        color: #001f4d;
+        background-color: white;
+    }
+    .bal{
+        font-size: 20px;
+        color: #001f4d;
+        background-color: white;
+    }
+    .kpk{
+        font-size: 20px;
+        color: #001f4d;
+        background-color: white;
+    }
+    .gb{
+        font-size: 17px;
+        color: #001f4d;
+        background-color: white;
+    }
+    .kash{
+        font-size: 14px;
+        color: #001f4d;
+        background-color: white;
+    }
+
+    @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0.5); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      .main-layout {
+        flex-direction: column;
+        padding: 1rem;
+      }
+
+      .text-section {
+        text-align: center;
+        padding: 1rem;
+      }
+
+      .maplogo {
+        width: 60px;
+        height: 60px;
+        top: 10px;
+        left: 10px;
+      }
+
+      .location {
+        font-size: 0.65rem;
+        padding: 0.25rem 0.5rem;
+      }
+
+      .text-section h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+
+  <a href="/index.html">
+    <img class="maplogo" src="/image/MeerLOGO.png" alt="Company Logo">
+  </a>
+
+  <div class="main-layout">
+    <div class="text-section">
+      <h1>Meer's Mind Map</h1>
+      <p>
+        We provide strategic security coverage across major Pakistani cities with precision, power, and professionalism. Our strong operational footprint ensures reliable protection — wherever you are. <strong>We work smarter, faster, and stronger.</strong>
+      </p>
+      <a href="https://maps.app.goo.gl/5G6rYGFxSp43gpoC9" target="_blank" class="google-map-btn">
+        📍 Visit Head Office at Karachi
+      </a>
+      <br>
+      <a href="https://maps.app.goo.gl/16b76AV3eGtPfSFK7" target="_blank" class="google-map-btn">
+        📍 View Lahore Branch       
+      </a>
+    </div>
+<!-- https://maps.google.com/?q=Meer+Security+Guard+Company+Pvt+Ltd -->
+    <div class="map-section">
+      <img src="/icons/ChatGPT Image Apr 11, 2025, 04_49_08 PM.png" alt="Pakistan Map" />
+      <div class="location pak">Pakistan</div>
+      <div class="location sin">Sindh</div>
+      <div class="location pun">Punjab</div>
+      <div class="location bal">Balochistan</div>
+      <div class="location kpk">KPK</div>
+      <div class="location gb">Gilgit-Baltistan</div>
+      <div class="location kash">Jammu & Kashmir</div>
+      <div class="location kar"><a href="https://maps.app.goo.gl/5G6rYGFxSp43gpoC9" target="_blank" style="text-decoration: none;"><i class="fas fa-map-marker-alt"></i>Karachi</a></div>
+      <div class="location hyd"><i class="fas fa-map-marker-alt"></i> Hyderabad</div>
+      <div class="location mir"><i class="fas fa-map-marker-alt"></i> MirpurKhas</div>
+      <div class="location that"><i class="fas fa-map-marker-alt"></i> Thatta</div>
+      <div class="location lhr"><a href="https://maps.app.goo.gl/16b76AV3eGtPfSFK7" target="_blank" style="text-decoration: none;"><i class="fas fa-map-marker-alt"></i> Lahore</a></div>  <div class="location fas"><i class="fas fa-map-marker-alt"></i> Faisalabad</div>
+      <div class="location guj"><i class="fas fa-map-marker-alt"></i> Gujranwala</div>
+      <div class="location bah"><i class="fas fa-map-marker-alt"></i> BahawalPur</div>
+      <div class="location isb"><i class="fas fa-map-marker-alt"></i> Islamabad</div>
+      <div class="location que"><i class="fas fa-map-marker-alt"></i> Quetta</div>
+      <div class="location gaw"><i class="fas fa-map-marker-alt"></i> Gawadar</div>
+      <div class="location tur"><i class="fas fa-map-marker-alt"></i> Turbat</div>
+      <div class="location chm"><i class="fas fa-map-marker-alt"></i> Chaman</div>
+      <div class="location khar"><i class="fas fa-map-marker-alt"></i> Kharan</div>
+      <div class="location orm"><i class="fas fa-map-marker-alt"></i> Ormara</div>
+      <div class="location wash"><i class="fas fa-map-marker-alt"></i> Washuk</div>
+      <div class="location taf"><i class="fas fa-map-marker-alt"></i> Taftan</div>
+      <div class="location pesh"><i class="fas fa-map-marker-alt"></i> Peshawar</div>
+      <div class="location fsd"><i class="fas fa-map-marker-alt"></i> Faisalabad</div>
+      <div class="location rwp"><i class="fas fa-map-marker-alt"></i> Rawalpindi</div>
+      <div class="location pesh"><i class="fas fa-map-marker-alt"></i> Peshawar</div>
+      <div class="location suk"><i class="fas fa-map-marker-alt"></i> Sukkur</div>
+      <div class="location mult"><i class="fas fa-map-marker-alt"></i> Multan</div>
+      <div class="location skr"><i class="fas fa-map-marker-alt"></i> Skardu</div>
+    </div>
+  </div>
+</body>
+</html>

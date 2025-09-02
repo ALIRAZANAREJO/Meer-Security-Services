@@ -1,0 +1,134 @@
+body{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif; 
+  align-items: center;
+  text-align:center;
+}
+#resContainer5{
+  display: flex; 
+  gap: 0px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Two equal columns */
+  margin-left: 30px;
+}     
+.Apply-Form{
+  display: flex;  
+  flex-direction: column;      /* Stack elements vertically */
+  align-items: flex-start;  
+  background-color:  #e0e0e0;
+  max-width: 30vw;
+  height: 450px;
+  border-radius: 2vw;
+  margin-top: 9vw;
+  margin-left: 30vw;
+}
+
+.input-container {
+  width: 30vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  gap: 0.1vw; /* Remove gap between items */
+  margin: 0 auto; /* Center the container */
+  margin-top: 20px;
+  margin-left:0px;
+  border-radius: 0.5vw;
+  border-width: 0vw;
+}
+
+.input-wrapper {
+  position: relative; /* Positioning context for the label */
+  margin-bottom: 20px; /* Space between inputs */
+}
+
+
+
+
+input {
+  font-size: 15px; /* Font size */
+  max-width: 13vw; /* Full width of the grid cell */
+  padding: 0.8vw;
+  border: none; /* Remove default border */
+  border-bottom: 2px solid #acacac; /* Add bottom border */
+  border-radius: 0; /* Remove border-radius */
+  outline: none; /* Remove default outline */
+  padding: 8px 0; /* Adjust padding for underline */
+  width: 100%; /* Full width */
+  transition: border-color 0.3s ease; /* Smooth transition */
+  transition: transform 0.5s;
+  background: rgba(255, 255, 255, 0);
+
+}
+
+/* Change bottom border color on focus */
+input:focus {
+  border-bottom: 2px solid  #007BFF; /* Change underline color on focus */
+}
+/* Label styles */
+label {
+  position: absolute;
+  left: 20px; /* Position inside the input */
+  top: 10px; /* Position inside the input */
+  color: #007BFF; /* Default label color */
+  transition: 0.2s ease all; /* Smooth transition */
+  pointer-events: none; /* Prevent interaction */
+  font-size: 14px;
+}
+
+/* Move label when input is focused or has text */
+input:focus + label,
+input:not(:placeholder-shown) + label {
+  top: -10px; /* Move up */
+  left: 12px; /* Adjust as needed */
+  font-size: 11px; /* Smaller font size */
+  color: #007BFF; /* Change color */
+}
+
+h3{
+  font-size: 1.3vw;
+  color: #007BFF;
+  margin-left: 105px;
+  margin-top: 10px;
+  text-align: center;
+}
+.profile{
+  width:100px;
+  height:100px; 
+  object-fit: cover; 
+  border-radius: 50%;
+
+}
+.image-upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+.image-upload-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 150px;
+}
+
+
+.sbbt{
+  width: 8vw;
+  height: 2.2vw;
+  font-size: 1.3vw;
+  cursor: pointer;
+  background:rgba(12, 89, 255, 0.904);
+  transition: all 0.3s ease;
+  border-radius: 0.5vw;
+  align-items: center;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+  margin-left: 150px;
+  margin-top: 0.5vw;
+}

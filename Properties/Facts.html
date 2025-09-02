@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Facts & Figure</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f7f8fa;
+      overflow-x: hidden;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #3b82f6;
+      margin-bottom: 2rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .intro h2 {
+      font-size: 2rem;
+    }
+
+    .intro p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      max-width: 800px;
+      margin: 0 auto;
+      color: #333;
+    }
+
+    .facts {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .fact-card {
+      width: 22%;
+      padding: 1.5rem;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-in-out;
+    }
+
+    .fact-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fact-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #3b82f6;
+    }
+
+    .fact-card p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .fact-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .fact-card {
+        width: 48%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .fact-card {
+        width: 100%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Introduction Section -->
+    <div class="intro">
+      <h2>Why Choose Meer Security Guard Pvt Ltd?</h2>
+      <p>With 20 years of experience and a proven track record, we provide top-tier security services that go beyond expectations. Here are the key reasons why you should trust us to protect your assets and ensure your safety.</p>
+    </div>
+
+    <!-- Facts Section -->
+    <div class="facts">
+      <div class="fact-card">
+        <h3>Experienced & Trained Professionals</h3>
+        <p>Our security personnel are highly trained with real-world experience, ensuring they can handle any situation that comes their way with skill and confidence.</p>
+      </div>
+
+      <div class="fact-card">
+        <h3>24/7 Security Coverage</h3>
+        <p>We provide round-the-clock security services, giving you peace of mind knowing your premises are always protected, regardless of the time or day.</p>
+      </div>
+
+      <div class="fact-card">
+        <h3>Customized Security Solutions</h3>
+        <p>We understand that every client has unique needs, which is why we offer personalized security plans tailored to your specific requirements.</p>
+      </div>
+
+      <div class="fact-card">
+        <h3>Advanced Technology Integration</h3>
+        <p>We integrate state-of-the-art technology into our security solutions, ensuring superior surveillance and rapid response times for maximum protection.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Animation for Fact Cards on Scroll
+    const factCards = document.querySelectorAll('.fact-card');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, { threshold: 0.5 });
+
+    factCards.forEach(card => observer.observe(card));
+  </script>
+
+</body>
+</html>

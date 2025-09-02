@@ -1,0 +1,271 @@
+// Function to handle button selection
+function selectButton(button) {
+    // Deselect all buttons
+    const buttons = document.querySelectorAll('.button');
+    buttons.forEach(btn => btn.classList.remove('selected'));
+
+    // Select the clicked button
+    button.classList.add('selected');
+}
+
+// Function to show the dropdown
+function showDropdown(button) {
+    const dropdown = button.nextElementSibling; // Get the next sibling (the dropdown)
+    dropdown.style.display = 'block'; // Show the dropdown
+}
+
+// Function to hide the dropdown
+function hideDropdown(button) {
+    const dropdown = button.nextElementSibling; // Get the next sibling (the dropdown)
+    dropdown.style.display = 'none'; // Hide the dropdown
+}
+
+// Add event listeners for dropdown behavior
+document.addEventListener('DOMContentLoaded', () => {
+    const dropdownContainers = document.querySelectorAll('.dropdown-container');
+
+    dropdownContainers.forEach(container => {
+        const button = container.querySelector('.button');
+        const dropdown = container.querySelector('.dropdown');
+
+        // Show dropdown when hovering over the button
+        button.addEventListener('mouseenter', () => showDropdown(button));
+        button.addEventListener('mouseleave', () => hideDropdown(button));
+
+        // Keep dropdown visible when hovering over it
+        dropdown.addEventListener('mouseenter', () => showDropdown(button));
+        dropdown.addEventListener('mouseleave', () => hideDropdown(button));
+    });
+});
+
+
+// const cityRoutes = {
+//     "palestine": "/Palestine/palestine.html",
+//     "israel": "/Israel/israel.html",
+//     "israel attack at palestine": "/IsraelAttackOnPalestine/Attack1948.html",
+//     "hamas":"/Hammaz-&-israel-War/Hammaz-Attack-On-Israel.html",
+  
+//     "my profile":"/Profile/profile.html",
+//     "palestine cities": "/PC/PC.html",
+//     "history of israel": "/Israel/History/History.html",
+//     "dream of israel" :"/Israel/Dream-of-israel/Dream-of-israel.html",
+//     "israel army":"/Israel/Israel-Army/Israel-Army.html",
+//     "israel militry": "/Israel/Israel-Army/Militry/Militory.html",
+//     "israel panzers": "/Israel/Israel-Army/Panzers/Panzer.html",
+//     "israel fighterjet": "/Israel/Israel-Army/Fighterjets/Fighterjet.html",
+//     "israel helicopter": "/Israel/Israel-Army/Helicopters/Helicopters.html",
+//     "israel uav": "/Israel/Israel-Army/UAV-Aircraft/UAV-Aircraft.html",
+  
+//     "israel attack at palestine": "/IsraelAttackOnPalestine/Attack1948.html",
+//     "hamas":"/Hammaz-&-israel-War/Hammaz-Attack-On-Israel.html",
+//     "history of hamas":"/Hammaz-&-israel-War/Hamas/Hamas.html",
+//     "hamas army":"/Hammaz-&-israel-War/Hamas-Army/Hamas-Army.html",
+//     "hamas and israel war":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Hammas-VS-israel/Hammas-VS-israel.html",
+  
+//     "history of palestine":"/IsraelAttackOnPalestine/History-of-palestine/History.html",
+//     "history of palestine":"/IsraelAttackOnPalestine/History-of-palestine/Established/Established.html",
+//     "How Yahodies make israel":"/IsraelAttackOnPalestine/History-of-palestine/Y-Make-Israel/Make-Isreal.html",
+  
+//     "palestine cities": "/IsraelAttackOnPalestine/PC/PC.html",
+//     "beit jala": "/IsraelAttackOnPalestine/PC/Cities/Beit-Jala/Beit-Jala.html",
+//     "beit sahour":"/IsraelAttackOnPalestine/PC/Cities/Beit-Sahour/Beit-Sahour.html",
+//     "bethlehem":"/IsraelAttackOnPalestine/PC/Cities/Bethlehem/Bethlehem.html",
+//     "gaza":"/IsraelAttackOnPalestine/PC/Cities/Gaza/Gaza.html",
+//     "hebron":"/IsraelAttackOnPalestine/PC/Cities/Hebron/Hebron.html",
+//     "jenin":"/IsraelAttackOnPalestine/PC/Cities/Jenin/Jenin.html",
+//     "jericho":"/IsraelAttackOnPalestine/PC/Cities/Jericho/Jericho.html",
+//     "jerusalem":"/IsraelAttackOnPalestine/PC/Cities/Jerusalem/Jerusalem.html",
+//     "khan younis":"/IsraelAttackOnPalestine/PC/Cities/Khan-Younis/Khan-Younis.html",
+//     "nablus":"/IsraelAttackOnPalestine/PC/Cities/Nablus/Nablus.html",
+//     "rafah":"/IsraelAttackOnPalestine/PC/Cities/Rafah/Rafah.html",
+//     "ramallah":"/IsraelAttackOnPalestine/PC/Cities/Ramallah-&-El-Bireh/Ramallah-&-El-Bireh.html",
+//     "tulkarem":"/IsraelAttackOnPalestine/PC/Cities/Tulkarem/Tulkarem.html",
+  
+  
+//     "all wars":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Israel-Attack-2022.html",
+//     "1948 to 2024 all war":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Wars 1948 to 2024/War.html",
+//     "battle of karameh":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Wars 1948 to 2024/Battle-of-Karameh/Battle-of-Karameh.html",
+//     "black september":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Wars 1948 to 2024/Black-September/Black-September.html",
+//     "fatah hamas conflict":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Wars 1948 to 2024/Fatah-Hamas-conflict/Fatah-Hamas-conflict.html",
+//     "fedayeen war":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Wars 1948 to 2024/fedayeen-war/fedayeen-war.html",
+//     "first intifada":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Wars 1948 to 2024/First-Intifada/First-Intifada.html",
+//     "gaza israel war 2012":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Wars 1948 to 2024/Gaza-Israel-2012/Gaza-Israel-2012.html",
+//     "gaza israel war 2008":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Wars 1948 to 2024/Gaza-War-2008/Gaza-War-2008.html",
+//     "israel arab war":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Wars 1948 to 2024/israel-Arab-War-1948/israel-Arab-War-1948.html",
+//     "israel gaza conflict":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Wars 1948 to 2024/Israel-Gaza-conflict-2014/Israel-Gaza-conflict-2014.html",
+//     "israeli operation":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Wars 1948 to 2024/Israeli-Operation-2012/Israeli-Operation-2012.html",
+//     "israeli raid":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Wars 1948 to 2024/Israeli-Raid/Israeli-Raid.html",
+//     "israel palestine crisis":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Wars 1948 to 2024/Israel–Palestine-Crisis-2021/Israel–Palestine-Crisis-2021.html",
+//     "":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Wars 1948 to 2024/Lebanese-Civil-War/Lebanese-Civil-War.html",
+//     "israel palestine crisis":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Wars 1948 to 2024/Israel–Palestine-Crisis-2021/Israel–Palestine-Crisis-2021.html",
+//     "lebanese civil war":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Wars 1948 to 2024/Lebanese-Civil-War/Lebanese-Civil-War.html",
+//     "lebanon war":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Wars 1948 to 2024/Lebanon-War/Lebanon-War.html",
+//     "qibya massacre":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Wars 1948 to 2024/Qibya-massacre/Qibya-massacre.html",
+//     "second intifada":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Wars 1948 to 2024/Second-Intifada/Second-Intifada.html",
+//     "south lebanon":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Wars 1948 to 2024/South-Lebanon-conflict/South-Lebanon-conflict.html",
+//     "war of attrition":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Wars 1948 to 2024/War-of-Attrition/War-of-Attrition.html",
+//     "war of camps":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Wars 1948 to 2024/War-of-Camps/War-of-Camps.html",
+  
+    
+  
+//    "israel attack 2023":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Israel-Attack-2023/Israel-Attack-2023.html",
+//   "videos":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Israel-Attack-2023/Missiles-Attack/Missiles-Attack.html",
+  
+//   "palestine Cities 2024":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Israel-Attack-2023/Cities/Cities.html",
+//   "beit jala 2024":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Israel-Attack-2023/Cities/Beit Jala/Beit Jala.html",
+//   "beit sahour 2024":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Israel-Attack-2023/Cities/Beit-Sahour/Beit-Sahour.html",
+//   "bethlehem 2024":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Israel-Attack-2023/Cities/Bethlehem/Bethlehem.html",
+//   "gaza 2024":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Israel-Attack-2023/Cities/Gaza/Gaza.html",
+//   "hebron 2024":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Israel-Attack-2023/Cities/Hebron/Hebron.html",
+//   "jenin 2024":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Israel-Attack-2023/Cities/Jenin/Jenin.html",
+//   "jericho 2024":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Israel-Attack-2023/Cities/Jerichi/Jericho.html",
+//   "jerusalem 2024":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Israel-Attack-2023/Cities/Jerusalem/Jerusalem.html",
+//   "khan younis 2024":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Israel-Attack-2023/Cities/Khan-Younis/Khan-Younis.html",
+//   "nablus 2024":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Israel-Attack-2023/Cities/Nablus/Nablus.html",
+//   "rafah 2024":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Israel-Attack-2023/Cities/Rafah/Rafah.html",
+//   "ramallah 2024":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Israel-Attack-2023/Cities/Ramallah/Ramallah.html",
+//   "tulkarem 2024":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Israel-Attack-2023/Cities/Tulkarem/Tulkarem.html",
+  
+//     "palestiniane after israel attack":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Israel-Attack-2023/Peoples/Peoples.html",
+//     "injured palestinianes":"/IsraelAttackOnPalestine/israel-Attack-om-Palestine/Israel-Attack-2023/injured-Palstinianes/injured.html",
+  
+//   };
+  
+  
+//   function handleKeyPress(event) {
+//     if (event.key === 'Enter') {
+//       searchCity();
+//     }
+//   }
+  
+//   function searchCity() {
+//     const cityInput = document.getElementById('searchInput').value.toLowerCase();
+//     if (cityRoutes.hasOwnProperty(cityInput)) {
+//       const cityPageUrl = cityRoutes[cityInput];
+//       window.location.href = cityPageUrl;
+//     } else {
+//       alert('So Sorry Input Not Found.');
+//     }
+//   }
+  
+//   document.addEventListener('DOMContentLoaded', () => {
+//     const searchInput = document.getElementById('searchInput');
+//     searchInput.addEventListener('keypress', handleKeyPress);
+//     const searchButton = document.getElementById('searchButton');
+//     searchButton.addEventListener('click', searchCity);
+//   });
+//   export function toggleMenu() {
+//     const navbar = document.querySelector('.navbar');
+//     navbar.classList.toggle('open');
+//   }
+  
+//   document.addEventListener('DOMContentLoaded', () => {
+//     const menuIcon = document.getElementById('menuIcon');
+//     menuIcon.addEventListener('click', toggleMenu);
+//   });
+  
+  
+  
+//   const phrases = [
+//     'Hi How are you Me Ali Raza Narejo :) Here i Assest you',
+//     'Welcome to My Palestine Website ',
+//     'Today We See About Palestine >',
+//     'What is Palestine ?',
+//     'Why is Palestine ?',
+//     'Where from Plaestinianes?',  
+//     'What Happend With Palestine ?',
+//     'Why Happend with Plaestine ?',
+//     'Who Attack At Palestine ?',
+//     'Is Israel Attact At Palestine ?',
+//     'Who is Israel ?',
+//     'Why is Israel ?',
+//     'Where From Israel ?',
+//     'Why israel War with Palestine ?',
+//     'How israel Attack at Palestine ?',
+//     'About Israel Army ?.'
+//   ];
+  
+//   let index = 0;
+//   let intervalId = null;
+//   let timerId = null;
+  
+//   function typePhrase(phrase) {
+//     const input = document.getElementById('searchInput');
+//     let i = 0;
+//     intervalId = setInterval(function() {
+//       if (i <= phrase.length) {
+//         input.value = phrase.substring(0, i);
+//         i++;
+//       } else {
+//         clearInterval(intervalId);
+//         timerId = setTimeout(erasePhrase, 3000);
+//       }
+//     }, 100);
+//   }
+  
+//   function erasePhrase() {
+//     const input = document.getElementById('searchInput');
+//     let phrase = input.value;
+//     let i = phrase.length;
+//     intervalId = setInterval(function() {
+//       if (i >= 0) {
+//         input.value = phrase.substring(0, i);
+//         i--;
+//       } else {
+//         clearInterval(intervalId);
+//         index = (index + 1) % phrases.length;
+//         typePhrase(phrases[index]);
+//       }
+//     }, 10);
+//   }
+  
+//   function stopTyping() {
+//     clearInterval(intervalId);
+//     clearTimeout(timerId);
+//   }
+  
+//   function restartTypingIfEmpty() {
+//     const input = document.getElementById('searchInput');
+//     if (input.value === '') {
+//       clearTimeout(timerId);
+//       timerId = setTimeout(startTyping, 3000);
+//     }
+//   }
+  
+//   function startTyping() {
+//     index = 0;
+//     typePhrase(phrases[index]);
+//   }
+  
+//   document.getElementById('searchButton').addEventListener('click', function() {
+//     stopTyping();
+//     searchCity();
+//   });
+  
+//   document.getElementById('searchInput').addEventListener('input', function() {
+//     stopTyping();
+//     restartTypingIfEmpty();
+//   });
+  
+//   document.getElementById('searchInput').addEventListener('click', function() {
+//     clearInterval(intervalId);
+//     this.value = '';
+//     stopTyping();
+//     restartTypingIfEmpty();
+//   });
+  
+//   document.getElementById('searchInput').addEventListener('focus', function() {
+//     setTimeout(function() {
+//       stopTyping();
+//     }, 100);
+//   });
+  
+//   startTyping();
+  
+//   export { handleKeyPress };
+  
+//   document.getElementById('up').addEventListener('click', function() {
+//     window.location.href = '/Profile/profile.html';
+//   });
+  
+  

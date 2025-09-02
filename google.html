@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/google.css">
+    <title>Document</title>
+</head>
+<body>
+
+  <!-- Inside your navbar -->
+<div id="user-info" class="user-info">
+    <img id="user-profile-img" class="user-profile-img" src="" alt="Profile" style="display:none;">
+    <span id="user-gmail" class="user-gmail"></span>
+</div>
+
+<!-- Custom Google-style Sign-in Modal -->
+<div id="authModal" class="auth-modal" aria-hidden="true">
+  <div class="auth-card" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <button class="auth-close" aria-label="Close" onclick="AuthUI.close()">✕</button>
+
+    <div class="auth-header">
+      <img src="https://www.gstatic.com/images/branding/product/2x/googleg_64dp.png" alt="" class="g-icon">
+      <h2 id="authTitle">Sign in with Google</h2>
+    </div>
+
+    <div id="authUser" class="auth-user hidden">
+      <img id="authPhoto" class="auth-photo" alt="Profile">
+      <div class="auth-meta">
+        <div id="authName" class="auth-name">Ali Raza</div>
+        <div id="authEmail" class="auth-email">arnstormbreaker@gmail.com</div>
+      </div>
+    </div>
+
+    <button id="authContinue" class="auth-cta" onclick="AuthUI.continue()">
+      Continue as <span id="authFirstName">Ali</span>
+    </button>
+
+    <div id="authHint" class="auth-hint">
+      To continue, Google will share your name, email address, and profile picture with this site.
+      See this site's <a href="/privacy" target="_blank" rel="noopener">privacy policy</a> and
+      <a href="/terms" target="_blank" rel="noopener">Terms of Service</a>.
+    </div>
+
+    <!-- Blue loading line -->
+    <div id="authProgress" class="auth-progress" aria-hidden="true"></div>
+  </div>
+</div>
+
+<a href="http://google.com">google.co</a>
+<!-- Firebase (compat build for firebase.* syntax) -->
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js" defer></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js" defer></script>
+
+
+
+<!-- Google Identity Services (One Tap) -->
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script type="module" src="./Js/google.js" defer></script>
+
+</body>
+</html>
+
+
+
+only replace ides and classes of ui in js of pupup login here is html

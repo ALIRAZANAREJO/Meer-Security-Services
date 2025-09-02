@@ -1,0 +1,899 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+.navbar {
+    width: 100%;
+    height: 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ececec;
+    color: white;
+    margin-top: -50px;
+    margin-left: -20px;
+    position: fixed;
+}   
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px; /* Adjust logo size */
+    height: auto;
+    margin-right: 10px;
+    max-width: 5.2vw;
+    height: 5.2vw;
+    min-width: 5vw;
+    border-radius: 5vw;
+   margin-left: 10px;
+   margin-top: 10px;
+   position: fixed;
+}
+  h4{
+    font-size: 2vw;
+    margin-left: 80px;
+  }
+.location {
+    flex-grow: 1;
+    text-align: center;
+    margin-left: -10px;
+    margin-top: -50px;
+    margin-right: -300px;
+}
+
+.menu-toggle {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin-left: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    margin-left: 5px;
+}
+
+.icon{
+ margin: -2vw;
+ }
+.icons {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.icn{
+    display: flex;
+    margin-left: 30vw;
+    margin-top: 0;
+}
+
+
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    padding: -2px 0;
+
+}
+.button {
+    opacity: 0.8;
+    width: 8vw;
+    height: 3.5vw;
+    font-size: 1.1vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgba(255, 255, 255, 0);
+    color: #535353;
+    border: none;
+    border-radius: 5px;
+    padding:  12px 0px;
+    cursor: pointer;
+    flex-basis: 20%; /* Button width */
+    margin: 0px;
+    font-weight: 550;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    transition: background-color 0.3s;
+    padding-left: -10px;
+    text-align: center;
+    margin-top: 43px;
+}
+
+.button:hover {
+    background-color: #ffffff;
+
+}
+.button::after {
+    content: '';
+    position: absolute;
+    left: 50%; /* Center horizontally */
+    bottom: 0; /* Position at the bottom */
+    height: 0.3vw; /* Height of the line */
+    width: 10%; /* Width of the line on hover */
+    background-color: transparent; /* Default to transparent */
+    transform: translateX(-50%); /* Center it */
+    transition: background-color 0.3s, width 0.3s; /* Added width transition */
+}
+.button:hover::after {
+    background-color: black; /* Black line on hover */
+    border-radius: 0.5vw;
+}
+.button.selected::after {
+    background-color: black; /* Black line for selected button */
+    width: 100%; /* Full width for selected button */
+    left: 0; /* Align to the left */
+    transform: none; /* Remove centering transform */
+    border-radius: 2vw;
+}
+.icon {
+    margin-right: 0.8vw; /* Space between icon and text */
+}
+img.icon {
+    width: 1.8vw; /* Set icon size */
+    height: 1.8vw; /* Set icon size */
+    margin-left:0.5vw;
+}
+
+#login-btn{
+    width: 8vw;
+    height: 3.5vw;
+    margin-right: 0px;
+    margin-top: 40px;
+    margin-left: 20px;
+    padding-right: 80px;
+}
+
+#search-btn{
+    /* width: 1vw;
+    height: 4vw; */
+    margin-left: 10px;
+}
+#search-btn:hover {
+    background-color: #ffffff00;
+}
+
+
+
+#search-btn img{
+    width: 2vw;
+    height: 2vw;
+    padding-top: 39px;
+    margin-left: 0px;
+    padding-right: -50px;
+}
+
+@media screen and (max-width: 1100px){
+    .navbar {
+        width: 100%;
+        height: 5vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #ececec;
+        color: white;
+        margin-top: -50px;
+        margin-left: -20px;
+        position: fixed;
+}   
+    
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+    
+    .logo img {
+        width: 50px; /* Adjust logo size */
+        height: auto;
+        margin-right: 10px;
+        max-width: 5.2vw;
+        height: 5.2vw;
+        min-width: 5vw;
+        border-radius: 5vw;
+       margin-left: 10px;
+       position: fixed;
+       margin-bottom: -30px;
+    }
+    .nav-links{
+        display: hide;
+    }
+      h4{
+        font-size: 2vw;
+        margin-left: 80px;
+      }
+    .location {
+        flex-grow: 1;
+        text-align: center;
+        margin-left: -10px;
+        margin-top: -50px;
+        margin-right: -300px;
+    }
+    
+    .menu-toggle {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        cursor: pointer;
+    }
+    
+    .menu-toggle .bar {
+        height: 3px;
+        width: 25px;
+        background-color: white;
+        margin: 3px 0;
+    }
+    
+    .nav-list {
+        display: flex;
+        list-style: none;
+        margin-left: 0;
+        padding: 0;
+    }
+    
+    .nav-list li {
+        margin-left: 5px;
+    }
+    
+    .icon{
+     margin: -2vw;
+     }
+    .icons {
+        display: flex;
+        align-items: center;
+        color: white;
+    }
+    
+    .icn{
+        display: flex;
+        margin-left: 30vw;
+        margin-top: 0;
+    }
+    
+    
+    
+    .button-container {
+        display: flex;
+        justify-content: space-around;
+        padding: -2px 0;
+    
+    }
+    .button {
+        opacity: 0.8;
+        width: 8vw;
+        height: 3.5vw;
+        font-size: 1.1vw;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: rgba(255, 255, 255, 0);
+        color: #535353;
+        border: none;
+        border-radius: 5px;
+        padding:  12px 0px;
+        cursor: pointer;
+        flex-basis: 20%; /* Button width */
+        margin: 0px;
+        font-weight: 550;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content:flex-start;
+        transition: background-color 0.3s;
+        padding-left: -10px;
+        text-align: center;
+        margin-top: 52px;
+        position: relative;
+    }
+    
+    .button:hover {
+        background-color: #ffffff;
+    
+    }
+    .button::after {
+        content: '';
+        position: absolute;
+        left: 50%; /* Center horizontally */
+        bottom: 0; /* Position at the bottom */
+        height: 0.3vw; /* Height of the line */
+        width: 10%; /* Width of the line on hover */
+        background-color: transparent; /* Default to transparent */
+        transform: translateX(-50%); /* Center it */
+        transition: background-color 0.3s, width 0.3s; /* Added width transition */
+    }
+    .button:hover::after {
+        background-color: black; /* Black line on hover */
+        border-radius: 0.5vw;
+    }
+    .button.selected::after {
+        background-color: black; /* Black line for selected button */
+        width: 100%; /* Full width for selected button */
+        left: 0; /* Align to the left */
+        transform: none; /* Remove centering transform */
+        border-radius: 2vw;
+    }
+    .icon {
+        margin-right: 0.8vw; /* Space between icon and text */
+    }
+    img.icon {
+        width: 1.8vw; /* Set icon size */
+        height: 1.8vw; /* Set icon size */
+        margin-left:0.5vw;
+    }
+    
+    #login-btn{
+        width: 8vw;
+        height: 3.5vw;
+        margin-right: -5px;
+        margin-top: 60px;
+    }
+    #search-btn{
+        /* width: 1vw;
+        height: 4vw; */
+        margin-left: -1px;
+        margin-top: -10px;
+    }
+    #search-btn:hover {
+        background-color: #ffffff00;
+    }
+    
+    
+    
+    #search-btn img{
+        width: 2.2vw;
+        height: 2.2vw;
+        margin-top: 70px;
+    }
+}
+
+@media screen and (max-width: 900px){
+
+    .button {
+        opacity: 0.8;
+        width: 8vw;
+        height: 3.5vw;
+        font-size: 1.1vw;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: rgba(255, 255, 255, 0);
+        color: #535353;
+        border: none;
+        border-radius: 5px;
+        padding:  12px 0px;
+        cursor: pointer;
+        flex-basis: 20%; /* Button width */
+        margin: 0px;
+        font-weight: 550;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content:flex-start;
+        transition: background-color 0.3s;
+        padding-left: -10px;
+        text-align: center;
+        margin-top: 52px;
+        position: relative;
+    }
+}
+
+
+
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+
+
+.main {
+  position: fixed;
+  height: 100vh;
+}
+
+.main__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
+
+.search,
+.login {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: var(--z-modal);
+  background-color: hsla(230, 75%, 15%, .1);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px); /* For safari */
+  padding: 8rem 1.5rem 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .4s;
+
+}
+
+.search__close,
+.login__close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 1.5rem;
+  color: var(--title-color);
+  cursor: pointer;
+}
+
+/*=============== HEADER & NAV ===============*/
+
+
+.nav__search, 
+.nav__login, 
+.nav__toggle, 
+.nav__close {
+  font-size: 1.5rem;
+  color: var(--title-color);
+  cursor: pointer;
+  transition: color .4s;
+}
+
+  
+
+
+.search__form {
+  display: flex;
+  align-items: center;
+  column-gap: .5rem;
+  background-color: var(--container-color);
+  box-shadow: 0 8px 32px hsla(230, 75%, 15%, .2);
+  padding-inline: 1rem;
+  border-radius: .5rem;
+  transform: translateY(-1rem);
+  transition: transform .4s;
+}
+
+.search__icon {
+  font-size: 1.25rem;
+  color: var(--title-color);
+}
+
+.search__input {
+  width: 100%;
+  padding-block: 1rem;
+  background-color: var(--container-color);
+  color: var(--text-color);
+}
+
+.search__input::placeholder {
+  color: var(--text-color);
+}
+
+/* Show search */
+.show-search {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.show-search .search__form {
+  transform: translateY(0);
+}
+
+/*=============== LOGIN ===============*/
+.login__form, 
+.login__group {
+  display: grid;
+}
+
+.login__form {
+  background-color: var(--container-color);
+  padding: 2rem 1.5rem 2.5rem;
+  box-shadow: 0 8px 32px hsla(230, 75%, 15%, .2);
+  border-radius: 1rem;
+  row-gap: 1.25rem;
+  text-align: center;
+  transform: translateY(-1rem);
+  transition: transform .4s;
+}
+
+.login__title {
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+}
+
+.login__group {
+  row-gap: 1rem;
+}
+
+.login__label {
+  display: block;
+  text-align: initial;
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  margin-bottom: .25rem;
+}
+
+.login__input {
+  width: 100%;
+  background-color: var(--container-color);
+  border: 2px solid var(--border-color);
+  padding: 1rem;
+  border-radius: .5rem;
+  color: var(--text-color);
+}
+
+.login__input::placeholder {
+  color: var(--text-color);
+}
+
+.login__signup {
+  margin-bottom: .5rem;
+}
+
+.login__signup a {
+  color: var(--first-color);
+}
+
+.login__forgot {
+  display: inline-block;
+  color: var(--first-color);
+  margin-bottom: 1.25rem;
+}
+
+
+
+/* Show login */
+.show-login {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.show-login .login__form {
+  transform: translateY(0);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For medium devices */
+@media screen and (min-width: 576px) {
+  .search-btn,
+  .login-btn {
+    padding-top: 10rem;
+  }
+
+  .search__form {
+    max-width: 450px;
+    margin-inline: auto;
+  }
+
+  .search__close,
+  .login__close {
+    width: max-content;
+    top: 5rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    font-size: 2rem;
+  }
+
+  .login__form {
+    max-width: 400px;
+    margin-inline: auto;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 700px) {
+  .nav {
+    height: calc(var(--header-height) + 2rem);
+    column-gap: 3rem;
+  }
+  .nav__close, 
+  .nav__toggle {
+    display: none;
+  }
+  .nav__menu {
+    margin-left: auto;
+  }
+  .nav__list {
+    flex-direction: row;
+    column-gap: 3rem;
+  }
+
+  .login__form {
+    padding: 3rem 2rem 3.5rem;
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  .container {
+    margin-inline: auto;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  .nav__menu {
+    position: fixed;
+    width: 0;
+    background-color: var(--body-color);
+    box-shadow: 0 8px 16px hsla(230, 75%, 32%, .15);
+    padding-block: 8.1rem 4rem;
+    transition: top .4s;
+    margin-left: 380px;
+  }
+ .icon{
+ margin: -2vw;
+ }
+.icons {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.icn{
+    display: flex;
+    margin-left: 30vw;
+    margin-top: 2vw;
+}
+
+
+}
+.icon {
+    margin-right: 0.8vw; /* Space between icon and text */
+}
+img.icon {
+    width: 1.9vw; /* Set icon size */
+    height: 1.9vw; /* Set icon size */
+    margin-left: 1.5vw;
+}
+
+#login-btn{
+    width: 2.2vw;
+    height: 4vw;
+    margin-left: -0px;
+
+}
+#search-btn{
+    margin-left: 0px;
+    margin-top: 1px;
+}
+
+#search-btn img{
+    width: 2.5vw;
+    height: 2.2vw;
+    margin-top: 10px;
+  }
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
+  text-align: center;
+}
+
+.nav__link {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  transition: color .4s;
+}
+
+.nav__close {
+  position: absolute;
+  top: 1.15rem;
+  right: 1.5rem;
+}
+
+
+
+
+@media screen and (max-width: 700px){
+    .navbar {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #ececec;
+        color: white;
+        margin-top: -50px;
+        margin-left: -20px;
+        position: fixed;
+}   
+    
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+    
+    .logo img {
+        width: 50px; /* Adjust logo size */
+        height: auto;
+        margin-right: 10px;
+        max-width: 5.2vw;
+        height: 5.2vw;
+        min-width: 5vw;
+        border-radius: 5vw;
+       margin-left: 10px;
+       margin-top: 10px;
+       position: fixed;
+    }
+      h4{
+        font-size: 2vw;
+        margin-left: 80px;
+      }
+    .location {
+        flex-grow: 1;
+        text-align: center;
+        margin-left: -10px;
+        margin-top: -50px;
+        margin-right: -300px;
+    }
+    
+    .menu-toggle {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        cursor: pointer;
+    }
+    
+    .menu-toggle .bar {
+        height: 3px;
+        width: 25px;
+        background-color: white;
+        margin: 3px 0;
+    }
+    
+    .nav-list {
+        display: flex;
+        list-style: none;
+        margin-left: 0;
+        padding: 0;
+        padding-top: 55px;
+    }
+    
+    .nav-list li {
+        margin-left: 5px;
+    }
+    
+    .icon{
+     margin: -2vw;
+     }
+    .icons {
+        display: flex;
+        align-items: center;
+        color: white;
+    }
+    
+    .icn{
+        display: flex;
+        margin-left: 30vw;
+        margin-top: 0;
+    }
+    
+    
+    
+    .button-container {
+        display: flex;
+        justify-content: space-around;
+        padding: -2px 0;
+    
+    }
+    .button {
+        opacity: 0.8;
+        width: 8vw;
+        height: 3.5vw;
+        font-size: 1.1vw;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: rgba(255, 255, 255, 0);
+        color: #535353;
+        border: none;
+        border-radius: 5px;
+        padding:  12px 0px;
+        cursor: pointer;
+        flex-basis: 20%; /* Button width */
+        margin: 0px;
+        font-weight: 550;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content:flex-start;
+        transition: background-color 0.3s;
+        padding-left: -10px;
+        text-align: center;
+        margin-top: 52px;
+        position: relative;
+    }
+    
+    .button:hover {
+        background-color: #ffffff;
+    
+    }
+    .button::after {
+        content: '';
+        position: absolute;
+        left: 50%; /* Center horizontally */
+        bottom: 0; /* Position at the bottom */
+        height: 0.3vw; /* Height of the line */
+        width: 10%; /* Width of the line on hover */
+        background-color: transparent; /* Default to transparent */
+        transform: translateX(-50%); /* Center it */
+        transition: background-color 0.3s, width 0.3s; /* Added width transition */
+    }
+    .button:hover::after {
+        background-color: black; /* Black line on hover */
+        border-radius: 0.5vw;
+    }
+    .button.selected::after {
+        background-color: black; /* Black line for selected button */
+        width: 100%; /* Full width for selected button */
+        left: 0; /* Align to the left */
+        transform: none; /* Remove centering transform */
+        border-radius: 2vw;
+    }
+    .icon {
+        margin-right: 0.8vw; /* Space between icon and text */
+    }
+    img.icon {
+        width: 1.8vw; /* Set icon size */
+        height: 1.8vw; /* Set icon size */
+        margin-left:0.5vw;
+    }
+    
+    #login-btn{
+        width: 8vw;
+        height: 3.5vw;
+        margin-right: -5px;
+        margin-top: 60px;
+    }
+    #search-btn{
+        /* width: 1vw;
+        height: 4vw; */
+        margin-left: -1px;
+        margin-top: -10px;
+    }
+    #search-btn:hover {
+        background-color: #ffffff00;
+    }
+    
+    
+    
+    #search-btn img{
+        width: 2.2vw;
+        height: 2.2vw;
+        margin-top: 70px;
+    }
+}

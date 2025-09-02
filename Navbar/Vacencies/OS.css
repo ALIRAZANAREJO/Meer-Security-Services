@@ -1,0 +1,579 @@
+body{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;  
+  }
+  .Apply-Form{
+    background-color: rgb(119, 255, 107);
+    max-width: 66vw;
+    height: 35vw;
+    border-radius: 2vw;
+    margin-left: 15vw;
+    margin-top: 8vw;
+  }
+  .input-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Two equal columns */
+    gap: 1vw; /* Remove gap between items */
+    margin: 0 auto; /* Center the container */
+    margin-top: 1vw;
+    margin-left: 1.2vw;
+  }
+  
+  input {
+    align-items: center;
+    width: 20vw; /* Full width of the grid cell */
+    padding: 0.8vw;
+    margin-bottom: 10px; /* Space between inputs */
+    box-sizing: border-box; /* Include padding in width calculation */
+    transition: transform 0.5s;
+  
+  }
+  
+  #Citybox {
+    font-size: 1.2vw;
+    color:rgba(0, 153, 255, 0.904);
+    align-items: center;
+    width: 20vw; /* Full width of the grid cell */
+    padding: 0.8vw;
+    margin-bottom: 10px; /* Space between inputs */
+    box-sizing: border-box; /* Include padding in width calculation */
+    transition: transform 0.5s;
+  
+  }
+  #updf {
+    background-color: #ffffff;
+    color:rgba(0, 153, 255, 0.904);
+    width: 20vw; /* Full width of the grid cell */
+    padding: 0.8vw;
+    margin-bottom: 10px; /* Space between inputs */
+    box-sizing: border-box; /* Include padding in width calculation */
+    transition: transform 0.5s;
+    text-align: start;
+  
+  }
+  ::placeholder{
+    font-size: 30vw;
+  }
+  /* Responsive styles for smaller screens */
+  @media (max-width: 1210px) {
+  
+  
+    .Apply-Form{
+      background-color: rgb(119, 255, 107);
+      max-width: 66vw;
+      height: 40vw;
+      border-radius: 2vw;
+      margin-left: 20vw;
+      margin-top: 9vw;
+    }
+  }
+  @media (max-width: 600px) {
+    .input-container {
+        grid-template-columns: 1fr; /* Stack inputs vertically on small screens */
+    }
+  }
+  
+  .input-container input {
+    border-color: #000000;
+    border-radius: 0.5vw;
+    border-width: 0vw;
+  }
+  input::placeholder {
+    font-size: 1.1vw;
+    color:rgba(0, 153, 255, 0.904);
+  }
+  input:hover {
+    transform: scale(1.1); 
+  }
+  #Citybox{ 
+    border-color: #000000;
+    border-radius: 0.5vw;
+    border-width: 0vw;
+  }
+  #Citybox::placeholder {
+    font-size: 1.1vw;
+    color:rgba(0, 153, 255, 0.904);
+  }
+  #Citybox:hover {
+    transform: scale(1.1); 
+  }
+  
+  #updf{
+    border-color: #000000;
+    border-radius: 0.5vw;
+    border-width: 0vw;
+  }
+  label{
+    font-size: 1.1vw;
+
+  }
+  #updf::placeholder {
+    font-size: 1.1vw;
+    color:rgba(0, 153, 255, 0.904);
+  }
+
+  #updf:hover { 
+    transform: scale(1.1); 
+  }
+  
+  h3{
+    font-size: 2vw;
+    color:rgba(0, 153, 255, 0.904);
+    padding-top: 9.5vw;
+  }
+  .circle-image-input {
+    width: 9vw; /* Set the width of the circle */
+    height: 9vw; /* Set the height of the circle */
+    border-radius: 50%; /* Make it circular */
+    overflow: hidden; /* Hide overflow */
+    position: absolute; /* Position relative for absolute positioning of img */
+    border: 0.3vw solid #2facff; 
+    background-color: #ffffff; /* Background color when no image is selected */
+    cursor: pointer; /* Change cursor to pointer */
+    margin-left: 27.7vw;
+    margin-top: 0.5vw;
+  }
+  
+  .circle-image-input input {
+    display: none; /* Hide the file input */
+  }
+  
+  #profileImage {
+    width: 100%; /* Full width of the circle */
+    height: 100%; /* Full height of the circle */
+    object-fit: cover; /* Cover the circle */
+    border-radius: 50%; /* Match the circle shape */
+    position: absolute; /* Position absolute to fill the circle */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+  }
+  
+  
+  /* .input-container {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 400px); 
+    grid-gap: 10px; 
+  } */
+  
+  /* .input-container input {
+    width: 350px; 
+    height: 45px;
+    margin-left: 300px;
+    padding-left: 25px;
+    font-size: 15px;
+    fill: none;
+  } */
+  .sbbt{
+    color: white;
+    width: 15vw;
+    height: 3vw;
+    font-size: 1.5vw;
+    cursor: pointer;
+    background: linear-gradient(-135deg, #4677ff, #02ff24);
+    transition: all 0.3s ease;
+    border-radius: 1.2vw;
+    align-items: center;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    margin-left: -1vw;
+    margin-top: -1vw;
+    transition: transform 0.5s;
+
+  }
+  
+  
+  .sbbt:hover {
+    transform: scale(1.1); 
+
+}
+  
+  @media (max-width: 500px) {
+    .navbar{
+      width: 10vw;
+      height: 7vw;
+      background-color: #b1b1b1; /* Foodpanda color */
+      display: flex;
+      justify-content: space-between;
+      box-shadow: 0 7px 1vw rgba(17, 17, 17, 0.103);
+      position: fixed ; 
+      margin-top: 1vw;
+      z-index: 1000; 
+    }
+    .Apply-Form{
+      background-color: rgb(119, 255, 107);
+      max-width: 70vw;
+      height: 150vw;
+      border-radius: 2vw;
+      margin-left: 15vw;
+      margin-top: 20vw;
+    }
+    .input-container {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr); /* Two equal columns */
+      gap: 1vw; /* Remove gap between items */
+      margin: 0 auto; /* Center the container */
+      margin-top: 1vw;
+      margin-left: 10vw;
+      text-align: center;
+      align-items: center;
+    }
+    
+    input {
+      align-items: center;
+      width: 50vw; /* Full width of the grid cell */
+      height: 6vw;
+      padding: 10px;
+      margin-bottom: 10px; /* Space between inputs */
+      box-sizing: border-box; /* Include padding in width calculation */
+      transition: transform 0.5s;
+    
+    }
+    
+  
+    
+    .input-container input {
+      border-color: #000000;
+      border-radius: 2vw;
+      border-width: 0vw;
+    }
+    input::placeholder {
+      font-size: 2.5vw;
+      text-align: center;
+      color:rgba(0, 153, 255, 0.904); 
+    }
+    input:hover {
+      transform: scale(1.1); 
+    }
+    
+    h3{
+      font-size: 3.5vw;
+      color:rgba(0, 153, 255, 0.904);
+      padding-top: 22vw;
+    }
+
+    #Citybox {
+      font-size: 2.2vw;
+      color:rgba(0, 153, 255, 0.904);
+      width: 50vw; /* Full width of the grid cell */
+      height: 6.7vw;
+      padding: 10px;
+      margin-bottom: 10px; /* Space between inputs */
+      box-sizing: border-box; /* Include padding in width calculation */
+      transition: transform 0.5s;  
+      text-align: center; 
+    
+    }
+    #updf {
+      font-size: 2.2vw;
+      background-color: #ffffff;
+      color:rgba(0, 153, 255, 0.904);
+      width: 50vw; /* Full width of the grid cell */
+      height: 6.7vw;
+      padding: 0.8vw;
+      margin-bottom: 10px; /* Space between inputs */
+      box-sizing: border-box; /* Include padding in width calculation */
+      transition: transform 0.5s;
+      text-align: center;
+    }
+    #Citybox{ 
+      border-color: #000000;
+      border-radius: 2vw;
+      border-width: 0vw;
+    }
+    #Citybox::placeholder {
+      font-size: 1.1vw;
+      color:rgba(0, 153, 255, 0.904);
+    }
+    #Citybox:hover {
+      transform: scale(1.1); 
+    }
+    
+    #updf{
+      border-color: #000000;
+      border-radius: 2vw;
+      border-width: 0vw;
+    }
+    label{
+      font-size: 1.1vw;
+  
+    }
+    #updf::placeholder {
+      font-size: 1.1vw;
+      color:rgba(0, 153, 255, 0.904);
+    }
+  
+    #updf:hover { 
+      transform: scale(1.1); 
+    }
+    
+    .circle-image-input {
+      width: 18vw; /* Set the width of the circle */
+      height: 18vw; /* Set the height of the circle */
+      border-radius: 50%; /* Make it circular */
+      overflow: hidden; /* Hide overflow */
+      position: absolute; /* Position relative for absolute positioning of img */
+      border: 2px solid #02ff24; /* Optional: border for the circle */
+      background-color: #ffffff; /* Background color when no image is selected */
+      cursor: pointer; /* Change cursor to pointer */
+      margin-left:25vw;
+      margin-top: 2vw;
+    }
+    
+    .circle-image-input input {
+      display: none; /* Hide the file input */
+    }
+    
+    #profileImage {
+      width: 100%; /* Full width of the circle */
+      height: 100%; /* Full height of the circle */
+      object-fit: cover; /* Cover the circle */
+      border-radius: 50%; /* Match the circle shape */
+      position: absolute; /* Position absolute to fill the circle */
+      top: 0; /* Align to top */
+      left: 0; /* Align to left */
+    }
+    
+    
+    /* .input-container {
+      margin-top: 50px;
+      display: grid;
+      grid-template-columns: repeat(2, 400px); 
+      grid-gap: 10px; 
+    } */
+    
+    /* .input-container input {
+      width: 350px; 
+      height: 45px;
+      margin-left: 300px;
+      padding-left: 25px;
+      font-size: 15px;
+      fill: none;
+    } */
+
+    .sbbt{
+      width: 30vw;
+      height: 7vw;
+      font-size: 3vw;
+      cursor: pointer;
+      background: linear-gradient(-135deg, #4677ff, #02ff24);
+      transition: all 0.3s ease;
+      border-radius: 5vw;
+      align-items: center;
+      border-bottom: 0px;
+      border-left: 0px;
+      border-right: 0px;
+      border-top: 0px;
+      margin-left: -1vw;
+      margin-top: 1vw;
+    }
+    
+    .expand-sbbt:hover {
+    transition: 2s;}
+  }
+ 
+  @media (max-width: 400px) {
+    .Apply-Form{
+      background-color: rgb(119, 255, 107);
+      max-width: 70vw;
+      height: 150vw;
+      border-radius: 2vw;
+      margin-left: 15vw;
+      margin-top: 20vw;
+    }
+    .input-container {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr); /* Two equal columns */
+      gap: 1vw; /* Remove gap between items */
+      margin: 0 auto; /* Center the container */
+      margin-top: 1vw;
+      margin-left: 10vw;
+      text-align: center;
+      align-items: center;
+    }
+    
+    input {
+      align-items: center;
+      width: 50vw; /* Full width of the grid cell */
+      height: 6vw;
+      padding: 10px;
+      margin-bottom: 10px; /* Space between inputs */
+      box-sizing: border-box; /* Include padding in width calculation */
+      transition: transform 0.5s;
+    
+    }
+    
+  
+    
+    .input-container input {
+      border-color: #000000;
+      border-radius: 2vw;
+      border-width: 0vw;
+    }
+    input::placeholder {
+      font-size: 2.5vw;
+      text-align: center;
+      color:rgba(0, 153, 255, 0.904); 
+    }
+    input:hover {
+      transform: scale(1.1); 
+    }
+    
+    h3{
+      font-size: 3vw;
+      color:rgba(0, 153, 255, 0.904);
+      padding-top: 22vw;
+    }
+
+    #Citybox {
+      font-size: 2.2vw;
+      color:rgba(0, 153, 255, 0.904);
+      width: 50vw; /* Full width of the grid cell */
+      height: 6.7vw;
+      padding: 10px;
+      margin-bottom: 10px; /* Space between inputs */
+      box-sizing: border-box; /* Include padding in width calculation */
+      transition: transform 0.5s;  
+      text-align: center; 
+    
+    }
+    #updf {
+      font-size: 2.2vw;
+      background-color: #ffffff;
+      color:rgba(0, 153, 255, 0.904);
+      width: 50vw; /* Full width of the grid cell */
+      height: 6.7vw;
+      padding: 0.8vw;
+      margin-bottom: 10px; /* Space between inputs */
+      box-sizing: border-box; /* Include padding in width calculation */
+      transition: transform 0.5s;
+      text-align: center;
+    }
+    #Citybox{ 
+      border-color: #000000;
+      border-radius: 2vw;
+      border-width: 0vw;
+    }
+    #Citybox::placeholder {
+      font-size: 1.1vw;
+      color:rgba(0, 153, 255, 0.904);
+    }
+    #Citybox:hover {
+      transform: scale(1.1); 
+    }
+    
+    #updf{
+      border-color: #000000;
+      border-radius: 2vw;
+      border-width: 0vw;
+    }
+    label{
+      font-size: 1.1vw;
+  
+    }
+    #updf::placeholder {
+      font-size: 1.1vw;
+      color:rgba(0, 153, 255, 0.904);
+    }
+  
+    #updf:hover { 
+      transform: scale(1.1); 
+    }
+    
+    .circle-image-input {
+      width: 17vw; /* Set the width of the circle */
+      height: 17vw; /* Set the height of the circle */
+      border-radius: 50%; /* Make it circular */
+      overflow: hidden; /* Hide overflow */
+      position: absolute; /* Position relative for absolute positioning of img */
+      border: 2px solid #02ff24; /* Optional: border for the circle */
+      background-color: #ffffff; /* Background color when no image is selected */
+      cursor: pointer; /* Change cursor to pointer */
+      margin-left:25vw;
+      margin-top: 2vw;
+    }
+    
+    .circle-image-input input {
+      display: none; /* Hide the file input */
+    }
+    
+    #profileImage {
+      width: 100%; /* Full width of the circle */
+      height: 100%; /* Full height of the circle */
+      object-fit: cover; /* Cover the circle */
+      border-radius: 50%; /* Match the circle shape */
+      position: absolute; /* Position absolute to fill the circle */
+      top: 0; /* Align to top */
+      left: 0; /* Align to left */
+    }
+    
+    
+    /* .input-container {
+      margin-top: 50px;
+      display: grid;
+      grid-template-columns: repeat(2, 400px); 
+      grid-gap: 10px; 
+    } */
+    
+    /* .input-container input {
+      width: 350px; 
+      height: 45px;
+      margin-left: 300px;
+      padding-left: 25px;
+      font-size: 15px;
+      fill: none;
+    } */
+
+    .sbbt{
+      width: 30vw;
+      height: 5vw;
+      font-size: 3vw;
+      cursor: pointer;
+      background: linear-gradient(-135deg, #4677ff, #02ff24);
+      transition: all 0.3s ease;
+      border-radius: 5vw;
+      align-items: center;
+      border-bottom: 0px;
+      border-left: 0px;
+      border-right: 0px;
+      border-top: 0px;
+      margin-left: -5vw;
+      margin-top: -8vw;
+    }
+    
+    .expand-sbbt:hover {
+    transition: 2s;}
+  }
+ 
+  
+  
+  /*
+  #Genbox{
+  
+    border-color: #02ff24;
+    border-radius: 5px;
+    border-width: 0.5px;
+    color:rgba(0, 153, 255, 0.904);
+  }
+  #Citybox{
+  
+    border-color: #02ff24;
+    border-radius: 5px;
+    border-width: 0.5px;
+    color:rgba(0, 153, 255, 0.904);
+  
+  }
+  #Coursebox{
+  
+    padding-left: 20px;
+    margin-left: 300px;
+    border-color: #02ff24;
+    border-radius: 5px;
+    border-width: 0.5px;
+    color:rgba(0, 153, 255, 0.904);
+  
+  }
+   */
+  

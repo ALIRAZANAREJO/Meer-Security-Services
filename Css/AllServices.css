@@ -1,0 +1,110 @@
+/* ===== Section Styling ===== */
+.services-section {
+    padding: 60px 10%;
+    background-color:#00337f;
+    text-align: center;
+    color: #fff;
+}
+
+/* Header Image */
+.services-header img {
+    width: 12%;
+    height: auto;
+    margin-bottom: 5px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+/* Titles */
+.services-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.services-subtitle {
+    font-size: 1.1rem;
+    color: #ccd6f6;
+    margin-bottom: 40px;
+}
+
+/* ===== Container ===== */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* ===== Cards ===== */
+.service-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px #00337f;
+    text-decoration: none;
+    color: #00337f;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.service-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.service-card:hover {
+    background:#00337f;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(255, 255, 255, 0.5);
+}
+
+/* ===== Icons ===== */
+.service-card .icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 15px;
+}
+
+.service-card .icon img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(0) saturate(100%) invert(18%) sepia(34%) saturate(3000%) hue-rotate(200deg);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Change icon color on hover */
+.service-card:hover .icon img {
+    filter: brightness(0) invert(1);
+}
+
+/* ===== Headings & Text ===== */
+.service-card h5 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #00337f;
+    transition: color 0.3s ease-in-out;
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    color: #555;
+    transition: color 0.3s ease-in-out;
+}
+
+.service-card:hover h5,
+.service-card:hover p {
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .services-title {
+        font-size: 2rem;
+    }
+    .services-subtitle {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,124 @@
+/* ======= Sign-in Popup Styles ======= */
+#signin-popup {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 800px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid #e2e8f0;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(-10px);
+  }
+  
+  /* When active */
+  #signin-popup.opacity-100 {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+  
+  /* User avatar */
+  #popup-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #ccc;
+  }
+  
+  /* Email text */
+  #popup-email {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin: 0;
+    line-height: 1.4;
+  }
+  
+  /* Sign-in button */
+  #popup-signin-btn {
+    margin-top: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #e81a35;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: underline;
+    transition: color 0.2s;
+  }
+  
+  #popup-signin-btn:hover {
+    color: #0c56d0;
+  }
+  /* Close button (top right) */
+#popup-close {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    color: rgb(0, 255, 42);
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  #signin-popup {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    width: 280px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid #e2e8f0;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Show when active */
+  #signin-popup.opacity-100 {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+  
+  /* ======= Responsive ======= */
+  @media (max-width: 500px) {
+    #signin-popup {
+      top: auto;
+      bottom: 20px;
+      right: 16px;
+      left: 16px;
+      width: auto;
+      flex-direction: row;
+      padding: 12px;
+    }
+  
+    #popup-email {
+      font-size: 13px;
+    }
+  
+    #popup-signin-btn {
+      font-size: 12px;
+    }
+  }
+  

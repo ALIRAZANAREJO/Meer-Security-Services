@@ -1,0 +1,143 @@
+body {
+  background: linear-gradient(to bottom right, #f0f4f8, #e2e8f0);
+  margin: 0;
+  padding: 0;
+}
+
+.meer-md-portfolio {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 2rem;
+  color: #1f2937;
+}
+
+.meer-md-hero {
+  background: #ffffff;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  margin-bottom: 3rem;
+  transition: all 0.3s ease;
+}
+
+.meer-md-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+.meer-md-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid  #00337f;
+  box-shadow: 0 10px 20px #276dd6;
+  transition: transform 0.4s ease;
+}
+.meer-md-photo:hover {
+  transform: scale(1.05);
+}
+
+.meer-md-name {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin: 0;
+  color: #111827;
+}
+
+.meer-md-title {
+  font-size: 1.2rem;
+  color: #00337f;
+  margin: 0.5rem 0;
+}
+
+.meer-md-bio {
+  font-size: 1rem;
+  max-width: 600px;
+  margin-top: 0.5rem;
+  line-height: 1.6;
+}
+
+.meer-md-tags {
+  margin-top: 1rem;
+}
+.meer-md-tags span {
+  background-color: #e0f2fe;
+  color:  #00337f;
+  padding: 0.4rem 1rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.meer-md-highlights {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.meer-md-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #00337f;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+.meer-md-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+}
+
+.meer-md-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+.meer-md-card:hover {
+  transform: translateY(-5px);
+}
+
+.meer-md-card h3 {
+  font-size: 1.5rem;
+  color:  #00337f;
+}
+
+.meer-md-card p {
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.meer-md-message {
+  background: #ffffff;
+  border-left: 4px solid #00337f;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 4px 10px  #00337f;
+}
+
+.meer-md-quote {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #374151;
+  line-height: 1.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .meer-md-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Entry</title>
+    <link rel="stylesheet" href="T2.css">
+    <link rel="stylesheet" href="./Css/resContainer.css">
+
+</head>
+<body>
+    <div class="form" id="Data">
+        <h1>Data Entry</h1>
+        <input type="text" id="Dish" placeholder="Resturent Name" required>
+        <input type="text" id="Food" placeholder="Food Name" required>
+        <input type="text" id="Price" placeholder="Price" required>
+        <input type="text" id="Time" placeholder="Time" required>
+        <input type="text" id="Rating" placeholder="Rating" required>
+        <input type="text" id="Reviews" placeholder="Reviews" required>
+        <input type="text"  id="Off" placeholder="Off" required>
+
+        <select id="containerSelect">
+            <option value="resContainer">resContainer</option>
+            <option value="resContainer2">resContainer2</option>
+            <option value="resContainer3">resContainer3</option>
+            <option value="resContainer4">resContainer4</option>
+            <option value="resContainer5">resContainer5</option>
+            <option value="resContainer6">resContainer6</option>
+            <option value="resContainer7">resContainer7</option>
+        </select>
+        
+<label class="custom-file-upload">
+            <input class="bts" type="file" id="ImageUpload" accept="image/*" required onchange="updateFileName()">
+        </label>
+        <span id="fileNameDisplay"></span>
+        <img id="uploadedImage" style="display:none;"/>
+        <button id="Insbtn" onclick="InsertData()">Create Card</button>
+        <button onclick="SelectDataByName()">Select</button>
+        <button id="Updbtn"  onclick="UpdateData()">Update</button>
+        <button id="Delbtn"  onclick="DeleteData()">Delete</button>
+    </div>
+    <a href="Print.html">View Cards</a>
+
+    <!-- <div id="resContainer"></div> -->
+    <div id="resContainer2"></div>
+    <div id="resContainer3"></div>
+    </div>
+
+  <script type="module" src="Booking02.js"></script>
+</body>
+</html>
+
+
+
+<!-- 
+<select id="Category">
+    <option value="" disabled>Select a category</option>
+    <option value="Pakistani">Pakistani</option>
+    <option value="Chines">Chines</option>
+    <option value="American">American</option>
+    <option value="Italian">Italian</option>
+</select> -->

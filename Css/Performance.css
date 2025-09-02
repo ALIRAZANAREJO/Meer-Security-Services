@@ -1,0 +1,83 @@
+  .training-page {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f8fafc;
+    padding: 2rem 1.5rem;
+    max-width: 1200px;
+    margin: auto;
+    color: #1f2937;
+  }
+
+  .training-hero {
+    text-align: center;
+    padding-bottom: 3rem;
+  }
+
+  .training-hero h1 {
+    font-size: 2.8rem;
+    color:  #00337f;
+    margin-bottom: 1rem;
+  }
+
+  .training-hero p {
+    font-size: 1.1rem;
+    max-width: 750px;
+    margin: 0 auto 1.5rem;
+    line-height: 1.7;
+    color:  #00337f;
+  }
+
+  .training-slogan {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color:  #00337f;
+    margin-top: 1rem;
+  }
+
+  .training-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+  }
+
+  .training-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .training-card:hover {
+    transform: translateY(-8px);
+  }
+
+  .training-card img {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #f0f0f0;
+  }
+
+  .training-card h3 {
+    font-size: 1.2rem;
+    color: #00337f;
+    margin-bottom: 0.5rem;
+  }
+
+  .training-card p {
+    font-size: 0.95rem;
+    color: #4b5563;
+  }
+
+  @media (max-width: 768px) {
+    .training-hero h1 {
+      font-size: 2rem;
+    }
+
+    .training-hero p {
+      font-size: 1rem;
+    }
+  }

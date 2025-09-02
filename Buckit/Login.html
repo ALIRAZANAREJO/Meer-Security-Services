@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Auth</title>
+</head>
+<body>
+
+  <a href="about.html" id="about-link">About</a><!-- User Profile Button -->
+  <a href="about.html" id="cont-link">Cont</a><!-- User Profile Button -->
+    <button id="user-profile-btn">User Profile</button>
+    
+    <!-- Signin Popup -->
+    <div id="signin-popup" style="display:none;">
+      <div style="background:#fff; padding:20px; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.1); width:300px;">
+        <span id="popup-close" style="float:right; cursor:pointer; color:red;">×</span>
+        <img id="popup-img" src="" style="width:50px; height:50px; border-radius:50%;"/>
+        <h4 id="popup-name">Welcome</h4>
+        <p id="popup-email"></p>
+        <button id="popup-continue">Continue as</button>
+        <button id="google-signin-btn" style="display:none;">Sign in with Google</button>
+      </div>
+    </div>
+    
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="/Js/Googleslogin.js"></script>
+
+</body>
+</html>

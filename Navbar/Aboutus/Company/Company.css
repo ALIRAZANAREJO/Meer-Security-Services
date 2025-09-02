@@ -1,0 +1,191 @@
+body{
+  background-color:#f9fafb;
+}
+  .meer-company-portfolio {
+    font-family: 'Segoe UI', sans-serif;
+    padding: 3rem 1.5rem;
+    background: #f9fafb;
+    color: #1f2937;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .meer-company-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .meer-company-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .meer-title {
+    font-size: 2.5rem;
+    color: #00337f;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .meer-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #6b7280;
+    margin-bottom: 1rem;
+  }
+
+  .meer-desc {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.7;
+  }
+
+  .meer-section-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+
+  .meer-card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .meer-card:hover {
+    transform: translateY(-10px);
+  }
+
+  .meer-card h2 {
+    font-size: 1.3rem;
+    color: #00337f;
+    margin-bottom: 1rem;
+  }
+
+  .meer-card p {
+    font-size: 1rem;
+    color: #374151;
+  }
+  .meer-card strong {
+    color:  #00337f;
+  }
+
+  .meer-section-founder,
+  .meer-section-md {
+    margin: 3rem 0;
+  }
+
+  .meer-founder-container {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .meer-profile-img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+
+  .meer-founder-info {
+    flex: 1;
+  }
+
+  .meer-founder-info h2 {
+    font-size: 1.8rem;
+    color:  #00337f;
+    margin-bottom: 1rem;
+  }
+
+  .meer-founder-info p {
+    font-size: 1rem;
+    color: #374151;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 768px) {
+    .meer-founder-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .meer-profile-img {
+      width: 180px;
+      height: 180px;
+    }
+
+    .meer-company-img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+
+  .meer-section-verification {
+    margin-top: 3rem;
+    padding: 2rem 1rem;
+    background-color: #ffffff;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+
+  .meer-verify-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #00337f;
+    margin-bottom: 2rem;
+  }
+
+  .meer-verify-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .meer-verify-card {
+    background: #f3f4f6;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    margin-top: 5rem;
+  }
+
+  .meer-verify-card:hover {
+    transform: translateY(-8px);
+  }
+
+  .meer-verify-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .meer-verify-card h3 {
+    font-size: 1.2rem;
+    color: #00337f;
+    margin-bottom: 0.5rem;
+  }
+
+  .meer-verify-card p {
+    font-size: 0.95rem;
+    color: #4b5563;
+    line-height: 1.5;
+  }

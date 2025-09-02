@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form</title>
+    <link rel="stylesheet" href="Askari.css">
+</head>
+<body>
+    <a class="forma" href="/index.html">Home</a>
+    <button type="button"></button>
+        <button id="serviceBtn" style="display: none;">Select a Service</button>
+        <div id="bookingForm">
+            <div class="fhd"><h1>Security Services</h1>
+                <h4>Please Select the Service you want to Avail</h4></div>
+
+            <!-- Close button -->
+            <div class="service-buttons">
+                <button class="service" data-service="guards">Security Guards</button>
+                <button class="service"  data-service="closeProtection">Close Protection</button>
+                <button class="service"  data-service="eventSecurity">Event Security</button>
+                <button class="service"  data-service="bulletproof">BulletProof Vehicle</button>
+            </div>
+
+            <div id="formContent" class="form-content">
+                <div id="guardsForm" class="form">
+                    <h2 class="heading03">Security Guards Booking</h2>
+ 
+                    <div class="input-container">
+                        <input  type="text" id="Name" placeholder="Name" required>
+                        <input  type="text" id="Lisnt" placeholder="Lisnt" required>
+                        <select id="Citybox" class="Citybox">
+                            <option value="">Select City</option>
+                            <option value="Karachi">Karachi</option>
+                            <option value="Hyderabad">Hyderabad</option>
+                            <option value="Faisalabad">Faisalabad</option>
+                            <option value="Mirpur Khas">Mirpur Khas</option>
+                            <option value="Islamabad">Islamabad</option>
+                            <option value="Lahore">Lahore</option>
+                            <option value="Multan">Multan</option>
+                            <option value="Peshawar">Peshawar</option>
+                        </select>
+                        <input type="text" id="Fname" placeholder="Email" required>
+                        <select id="Caddres" class="Citybox">
+                            <option value="">Select Deployment Area</option>
+                            <option value="Office">Office</option>
+                            <option value="Residence">Residence</option>
+                            <option value="Others">Others</option>
+                        </select>
+                          <input type="number" id="Phone" placeholder="Phone-No" required>
+                          <select id="Paddres"  class="Citybox">
+                            <option value="Guardcat">Select Category</option>
+                            <option value="Un-Armed">Un-Armed</option>
+                            <option value="Civil Trained Guard">Civil Trained Guard</option>
+                            <option value="Ex-Army Guard">Ex-Army Guard</option>
+                            <option value="SSG Commando">SSG Commando</option>
+                            <option value="Special Security Wing(SSW)">Special Security Wing(SSW)</option>
+                            <option value="Security Supervisor(SS)">Security Supervisor(SS)</option>
+                            <option value="CCTV Operator">CCTV Operator</option>
+                        </select>
+                          <input type="number" id="Cnic" placeholder="CNIC-No" required>
+                          <select id="Qual"  class="Citybox">
+                            <option value="">Select Weapon</option>
+                            <option value=">Un-Armed">Un-Armed</option>
+                            <option value="Shotgun">Shotgun</option>
+                            <option value="Pistol">Pistol</option>
+                            <option value="MP-5">MP-5</option>
+                            <option value="7MM">7MM</option>
+                            <option value="9MM">9MM</option>
+                            <option value="222 Auto">222 Auto</option>
+                            <option value="223 Auto">223 Auto</option>
+                            <option value="AK 47 (Special Aprovel Needed)">AK 47 (Special Aprovel Needed)</option>
+                        </select>
+
+                          <input type="number" id="Dob" placeholder="No of Guards Required"required>
+                          <input type="text"  id="Rarmy" placeholder="Additional Information (Optional)" required>
+                      </div>
+                      
+                          <select style="display: none;" id="containerSelect1">
+                              <option style="display: none;" value="resContainer1">resContainer2</option>
+                          </select>
+                          <button class="sbbt" id="Insbtn"  onclick="InsertData()">Submit</button>
+                </div>
+
+
+                 
+                <div id="closeProtectionForm" class="form hidden">
+                    <h2 class="heading03">Close Protection Body Guard</h2>
+
+                    
+                    <div class="input-container">
+                        <input  type="text" id="Yname" placeholder="Name" required>
+                        <select id="Vehicles" class="Citybox">
+                            <option value="">Vehicles Required</option>
+                            <option value="Office">Simple</option>
+                            <option value="Residence">Bullet Proof</option>
+                        </select>
+                   
+                        <input type="text" id="Email" placeholder="Email" required>
+                        <select class="Citybox" id="Deploymentarea">
+                            <option value="">Select Deployment Area</option>
+                            <option value="Office">Office</option>
+                            <option value="Residence">Residence</option>
+                            <option value="Factories / Mills">Factories / Mills</option>
+                            <option value="Housing Societies">Housing Societies</option>
+                            <option value="Educational Institutions">Educational Institutions</option>
+                            <option value="Hospitals">Hospitals</option>
+                            <option value="Private">Private</option>
+                            <option value="Government Organizations">Government Organizations</option>
+                            <option value="NGO">NGO</option>
+                            <option value="Embassies">Embassies</option>
+                            <option value="Travellers">Travellers</option>
+                            <option value="Tourists">Tourists</option>
+                        </select>
+                          <input type="number" id="Number" placeholder="Phone-No" required>
+                          <select id="Gcategory"  class="Citybox">
+                            <option value="">Select Category</option>
+                            <option value="Un-Armed">Un-Armed</option>
+                            <option value="Civil Trained Guard">Civil Trained Guard</option>
+                            <option value="Ex-Army Guard">Ex-Army Guard</option>
+                            <option value="SSG Commando">SSG Commando</option>
+                            <option value="Special Security Wing(SSW)">Special Security Wing(SSW)</option>
+                            <option value="Security Supervisor(SS)">Security Supervisor(SS)</option>
+                            <option value="CCTV Operator">CCTV Operator</option>
+                        </select>
+                          <input type="number" id="Identitynic" placeholder="CNIC-No" required>
+                          <select id="Wcategory"  class="Citybox">
+                            <option value="">Select Weapon</option>
+                            <option value="Un-Armed">Un-Armed</option>
+                            <option value="Shotgun">Shotgun</option>
+                            <option value="Pistol">Pistol</option>
+                            <option value="MP-5">MP-5</option>
+                            <option value="7MM">7MM</option>
+                            <option value="9MM">9MM</option>
+                            <option value="Multan">222 Auto</option>
+                            <option value="Peshawar">223 Auto</option>
+                            <option value="Peshawar">AK 47 (Special Aprovel Needed)</option>
+                        </select>
+
+                          <input type="number" id="NoofGuardsrequired" placeholder="No of Guards Required"required>
+     
+
+                          <input type="text"  id="Addinf" placeholder="Additional Information (Optional)" required>
+                          <select id="Selectcity" class="Citybox">
+                            <option value="">Select City</option>
+                            <option value="Karachi">Karachi</option>
+                            <option value="Hyderabad">Hyderabad</option>
+                            <option value="Faisalabad">Faisalabad</option>
+                            <option value="Mirpur Khas">Mirpur Khas</option>
+                            <option value="Islamabad">Islamabad</option>
+                            <option value="Lahore">Lahore</option>
+                            <option value="Multan">Multan</option>
+                            <option value="Peshawar">Peshawar</option>
+                        </select>
+
+
+
+                      </div>
+                      
+                      
+                          <select style="display: none;" id="containerSelect2">
+                              <option style="display: none;" value="resContainer2">resContainer2</option>     
+                          </select>
+                          <button class="sbbt" id="mitdata"  onclick="SubmitData()">Submit</button>
+                </div> 
+                
+       <div id="eventSecurityForm" class="form hidden">
+                    <h2  class="heading03">Event Security Booking</h2>
+                    <div class="input-container">
+                        <input  type="text" id="Myname" placeholder="Name" required>
+                        <select id="Mycity" class="Citybox">
+                            <option value="">Select City</option>
+                            <option value="Karachi">Karachi</option>
+                            <option value="Hyderabad">Hyderabad</option>
+                            <option value="Faisalabad">Faisalabad</option>
+                            <option value="Mirpur Khas">Mirpur Khas</option>
+                            <option value="Islamabad">Islamabad</option>
+                            <option value="Lahore">Lahore</option>
+                            <option value="Multan">Multan</option>
+                            <option value="Peshawar">Peshawar</option>
+                        </select>
+                        <input type="text" id="Ali" placeholder="Father Name" required>
+                        <select id="Sdeparea" class="Citybox">
+                            <option value="">Select Deployment Area</option>
+                            <option value="Office">Office</option>
+                            <option value="Residence">Residence</option>
+                            <option value="">Factory / Mill</option>
+                            <option value="">Educational Institutions</option>
+                            <option value="">Marquee</option>
+                            <option value="">Merriage Hall</option>
+                            <option value="">Open Area</option>
+                            <option value="">Other</option>
+                        </select>
+                          <input type="number" id="Mypno" placeholder="Phone-No" required>
+                          <select id="Equipmentreq"  class="Citybox">
+                            <option value="">Equipment Required</option>
+                            <option value="CCTV Camera">CCTV Camera</option>
+                            <option value="">Walk Through Gate</option>
+                            <option value="">Walkei Talkie</option>
+                            <option value="">Metal Detectors</option>
+                            <option value="">Letr AGL Acces & Evaluate</option>
+                            <option value="">Snipper</option>
+                        </select>
+                          <input type="number" id="Myidno" placeholder="CNIC-No" required>
+                         
+                          <select id="Selwapen"  class="Citybox">
+                            <option value="">Select Weapon</option>
+                            <option value="Karachi">Un-Armed</option>
+                            <option value="Hyderabad">Shotgun</option>
+                            <option value="Faisalabad">Pistol</option>
+                            <option value="Mirpur Khas">MP-5</option>
+                            <option value="Islamabad">7MM</option>
+                            <option value="Lahore">9MM</option>
+                            <option value="Multan">222 Auto</option>
+                            <option value="Peshawar">223 Auto</option>
+                            <option value="Peshawar">AK 47 (Special Aprovel Needed)</option>
+                        </select>
+                        <select id="Selgcat"  class="Citybox">
+                            <option value="">Select Category</option>
+                            <option value="Un-Armed">Un-Armed</option>
+                            <option value="Civil Trained Guard">Civil Trained Guard</option>
+                            <option value="Ex-Army Guard">Ex-Army Guard</option>
+                            <option value="SSG Commando">SSG Commando</option>
+                            <option value="Special Security Wing(SSW)">Special Security Wing(SSW)</option>
+                            <option value="Security Supervisor(SS)">Security Supervisor(SS)</option>
+                            <option value="CCTV Operator">CCTV Operator</option>
+                        </select>
+                       
+
+                          <input type="text"  id="Optionalinf" placeholder="Additional Information (Optional)" required>
+                          <input type="checkbox" class="checkbox">
+                          <label >Special Security Wing (SSW)</label>
+                          <input type="checkbox" class="checkbox">
+                          <label for="ssw">Walk Through Gate</label>
+                          <input type="checkbox" class="checkbox">
+                          <label for="ssw">Ex-Army Man</label>
+                          <input type="checkbox" class="checkbox">
+                          <label for="ssw">Security Supervisor</label>
+                          <input type="checkbox" class="checkbox">
+                          <label for="ssw">Trained Civilian</label>
+                          <input type="checkbox" class="checkbox">
+                          <label for="ssw">CCTV Operator</label>
+                          <input type="checkbox" class="checkbox">
+                          <label for="ssw">Others</label>
+
+
+                      
+            
+                          
+            
+                      </div>
+                      
+                      <div id="coinpt">            
+                        <input type="number" id="Ssw" placeholder="Enter Quantity" required>
+                        <input type="number" id="Wtg" placeholder="Enter Quantity" required>      
+                        <input type="number" id="Militry" placeholder="Enter Quantity" required>
+                        <input type="number" id="Ss" placeholder="Enter Quantity" require>
+                        <input type="number" id="Tc" placeholder="Enter Details" required>
+                        <input type="number" id="Cctv" placeholder="Enter Quantity" require>
+                        <input type="number" id="Other" placeholder="Enter Quantity" require>
+                    </div>
+                          <select style="display: none;" id="containerSelect3">
+                              <option style="display: none;" value="resContainer3">resContainer3</option>
+                             
+                          </select>
+                          <button class="sbbt" id="ebtns"  onclick="Asure()">Submit</button>
+                   
+                </div>
+
+             <div id="bulletproofForm" class="form hidden"> 
+                    <h2  class="heading03">BulletProof Vehicle Booking</h2>
+                    <div class="input-container">
+                        <input  type="text" id="Yentre" placeholder="Name" required>
+                        <select id="Yourcity" class="Citybox">
+                            <option value="">Select City</option>
+                            <option value="Karachi">Karachi</option>
+                            <option value="Hyderabad">Hyderabad</option>
+                            <option value="Faisalabad">Faisalabad</option>
+                            <option value="Mirpur Khas">Mirpur Khas</option>
+                            <option value="Islamabad">Islamabad</option>
+                            <option value="Lahore">Lahore</option>
+                            <option value="Multan">Multan</option>
+                            <option value="Peshawar">Peshawar</option>
+                        </select>
+                        <input type="text" id="email" placeholder="Email" required>
+                        <select id="Carsreq" class="Citybox">
+                            <option value="Vehicles required">Vehicles Required</option>
+                            <option value="Office">Simple</option>
+                            <option value="Residence">Bullet Proof</option>
+                        </select>
+                          <input type="number" id="Mobileno" placeholder="Phone-No" required>
+                          <select id="Guardcat"  class="Citybox">
+                            <option value="">Select Category</option>
+                            <option value="Karachi">Un-Armed</option>
+                            <option value="Hyderabad">Civil Trained Guard</option>
+                            <option value="Faisalabad">Ex-Army Guard</option>
+                            <option value="Mirpur Khas">SSG Commando</option>
+                            <option value="Islamabad">Special Security Wing(SSW)</option>
+                            <option value="Lahore">Security Supervisor(SS)</option>
+                            <option value="Multan">CCTV Operator</option>
+                        </select>
+                          <input type="number" id="Cardno" placeholder="CNIC-No" required>
+                          <select id="Wopencat"  class="Citybox">
+                            <option value="">Select Weapon</option>
+                            <option value="Karachi">Un-Armed</option>
+                            <option value="Hyderabad">Shotgun</option>
+                            <option value="Faisalabad">Pistol</option>
+                            <option value="Mirpur Khas">MP-5</option>
+                            <option value="Islamabad">7MM</option>
+                            <option value="Lahore">9MM</option>
+                            <option value="Multan">222 Auto</option>
+                            <option value="Peshawar">223 Auto</option>
+                            <option value="Peshawar">AK 47 (Special Aprovel Needed)</option>
+                        </select>
+                          <input type="number" id="Secgreq" placeholder="No of Guards Required"required>
+                          <input type="text"  id="Foji" placeholder="Additional Information (Optional)" required>
+                          <label1 class="fromd" >From Date</label1>
+                          <label1 class="fromd" >To Date</label1>
+                         <input type="date" id="Fromdate" placeholder="From Date" >
+                         <input type="date" id="Todate"   placeholder="To Date"  >
+                      </div>
+                          <select style="display: none;" id="containerSelect4">
+                              <option style="display: none;" value="resContainer4">resContainer4</option>
+                             
+                          </select>
+                          <button class="sbbt" id="yttt"  onclick="Ensert()">Submit</button>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="/Navbar/Services/Booking/Booking01.js"></script>
+    <script type="module" src="/Navbar/Services/Booking/Booking02.js"></script>
+    <script type="module" src="/Navbar/Services/Booking/Booking03.js"></script>
+    <script type="module" src="/Navbar/Services/Booking/Booking04.js"></script>
+    <script src="Askari.js"></script>
+</body>
+</html>
+<!-- id="resContainer" 
+id="resContainer2"
+id="resContainer3"
+id="resContainer4" -->

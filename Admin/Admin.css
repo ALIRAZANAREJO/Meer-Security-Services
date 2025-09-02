@@ -1,0 +1,103 @@
+ body{
+    align-items: center;
+    text-align: center;
+ }
+.logo-link {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 50%;
+  background-color: #007BFF;
+}
+
+h5{
+    font-size: 3rem;
+    color: rgb(0, 0, 0);
+    margin-bottom: -100px;
+}
+.AdminPannel{
+    align-items: center;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-left: 20vw;
+    margin-top: 200px;
+}
+.Clints{
+    width: 30vw;
+    height: 300px;
+    border-radius: 30px;
+    color: white;
+    background: linear-gradient(-70deg, #0003b8e0,#8fc3ff);
+    text-decoration: none;
+    transition: 0.5s;
+
+
+}
+
+
+.Employes{
+    width: 30vw;
+    height: 300px;
+    border-radius: 30px;
+    color: white;
+    background: linear-gradient(-70deg, #ff3075, #ff9cca);
+    text-decoration: none;
+    transition: 0.5s;
+
+}
+.Clints:hover{
+    scale: 1.1;
+}
+.Employes:hover{
+    scale: 1.1;
+}
+.icimg{
+    width: 70px;
+    margin-left: 50px;
+} 
+.TotalApplication{
+    font-size: 8vw;
+    margin-left: 19vw;
+    margin-top: -60px;
+
+}
+/* 
+.loading-circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+.loading-circle svg {
+    transform: rotate(-90deg);
+}
+.loading-circle circle {
+    fill: none;
+    stroke-width: 10;
+}
+.background {
+    stroke: #e6e6e6;
+}
+.progress {
+    stroke: #4caf50;
+    transition: stroke-dasharray 0.5s ease;
+}
+.count-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    text-align: center;
+} */

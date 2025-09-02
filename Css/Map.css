@@ -1,0 +1,10 @@
+.body{
+    align-items: center;
+
+}
+.map{
+    width: 110%;
+    height: 100%;
+    margin-top: -10px;
+    margin-left: -10px;
+}

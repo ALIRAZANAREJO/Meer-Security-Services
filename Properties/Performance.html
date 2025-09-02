@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enhancing Skills for Safety</title>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      background: #000;
+    }
+
+    .slide-wrapper {
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .slides {
+      height: 100%;
+      width: 100%;
+      overflow-y: auto;
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+    }
+
+    .slide {
+      height: 100vh;
+      scroll-snap-align: start;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      text-align: center;
+      color: #fff;
+      padding: 20px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1s ease;
+    }
+
+    .content.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .content h1 {
+      font-size: 2.8rem;
+      color: #3b82f6; /* Blue */
+      margin-bottom: 1rem;
+    }
+
+    .content p {
+      font-size: 1.3rem;
+      line-height: 1.8;
+      color: #e5e7eb;
+    }
+
+    @media (max-width: 768px) {
+      .content h1 { font-size: 2rem; }
+      .content p { font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slide-wrapper">
+    <div class="slides" id="slideContainer">
+      
+      <section class="slide" style="background-image: url('/Cimg/security02.jpg');">
+        <div class="overlay"></div>
+        <div class="content">
+          <h1>Excellence in Every Operation</h1>
+          <p>Meer Security Guard Company Pvt Ltd delivers unmatched performance through strategic planning, disciplined operations, and unwavering professionalism. We are committed to providing security services that exceed expectations, every single day.</p>
+        </div>
+      </section>
+
+      <section class="slide" style="background-image: url('/Cimg/2.png');">
+        <div class="overlay"></div>
+        <div class="content">
+          <h1>Trained to Protect,Ready to Serve</h1>
+          <p>Our team undergoes advanced training designed to sharpen reflexes, improve judgment, and boost tactical awareness. We prepare our guards to act swiftly and smartly in any situation, ensuring total safety under pressure.</p>
+        </div>
+      </section>
+
+      <section class="slide" style="background-image: url('/Cimg/2.jpg');">
+        <div class="overlay"></div>
+        <div class="content">
+          <h1>Trusted by Clients, Proven by Action</h1>
+          <p>We don’t just promise safety — we deliver it through consistency, honesty, and visible results. Our clients trust us because we show up with confidence, discipline, and a commitment to doing things the right way.</p>
+        </div>
+      </section>
+
+      <section class="slide" style="background-image: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be');">
+        <div class="overlay"></div>
+        <div class="content">
+          <h1>Creating Safe and Happy Environments</h1>
+          <p>Security isn’t just about protection — it’s about peace of mind. With Meer Security by your side, you’ll feel comfort, assurance, and happiness in every space we guard. Because when we’re with you, you’re in safe hands.</p>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const content = entry.target.querySelector('.content');
+        if (entry.isIntersecting) {
+          content.classList.add('visible');
+        } else {
+          content.classList.remove('visible');
+        }
+      });
+    }, {
+      threshold: 0.6
+    });
+
+    slides.forEach(slide => observer.observe(slide));
+
+    // Auto-scroll every 7 seconds
+    const container = document.getElementById('slideContainer');
+    let index = 0;
+
+    function scrollNext() {
+      index = (index + 1) % slides.length;
+      slides[index].scrollIntoView({ behavior: 'smooth' });
+    }
+
+    setInterval(scrollNext, 7000);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,526 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+  *input{
+    box-sizing: border-box;
+
+  }
+.background-image {
+  background-image: url('/imgs/ARX.jpg');
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#bookingForm{
+  margin-top: -1vw;
+  max-width: 50vw;
+  max-height:5vw;
+  margin-left: 23vw;
+  border-radius: 2vw;
+
+}
+button {
+    max-width: 4vw;
+    height: 3vw;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #ff7f16;
+    color: white;
+    font-size: 1.1vw;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+.forma {
+    max-width: 4vw;
+    height: 3vw;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #ff7f16;
+    color: white;
+    font-size: 1.1vw;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    font-display: none;
+}
+.sbbt{
+    max-width: 20vw;
+    height: 3vw ;
+    font-size: 1.3vw;
+    width: 13vw;
+    border-radius: 1vw;
+    margin-left: 17vw;
+    margin-top: 2vw;
+}
+button:hover {
+    background-color: #0a80ff;
+}
+.service.active {
+    background-color: #0a80ff; 
+    color: white; 
+}
+.hidden {
+    display: none;
+}
+
+.service-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -2vw;
+}
+
+.service {
+    flex: 2 2 100%; /* Responsive buttons */
+    max-width: 12.5vw;
+}
+
+.fhd{
+    height: 9.5vw;
+    color: white;
+    background: #0a80ff;
+    align-items: center;
+    text-align: center;
+    border-radius: 2vw;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    padding-top: 0.1px;
+}
+h1{
+  font-size: 2.8vw;
+    color: #ff7f16;
+    margin-top: 1.5vw;
+}
+h4{
+    font-size: 1.5vw;
+    margin-top: -1.5vw;
+}
+.heading03{
+    color: #007bff;
+    font-size: 1.9vw;
+    margin-top: 1vw;
+    margin-left: 12vw;  
+}
+.form-content {
+    margin-top: -1.5vw;
+}
+
+.form {
+    margin-top: 1vw;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #8fdfff;
+}
+
+.input-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 1vw; /* Remove gap between items */
+    margin: 0 auto; /* Center the container */
+    margin-top: 1vw;
+    margin-left: 2vw;
+  }
+  
+  input {
+    align-items: center;
+    width: 20vw; /* Full width of the grid cell */
+    padding: 0.8vw;
+    margin-bottom: 10px; /* Space between inputs */
+    box-sizing: border-box; /* Include padding in width calculation */
+    transition: transform 0.5s;
+  
+  }
+  
+  .Citybox {
+    font-size: 1.2vw;
+    color:rgba(0, 153, 255, 0.904);
+    align-items: center;
+    width: 20vw; /* Full width of the grid cell */
+    padding: 0.8vw;
+    margin-bottom: 10px; /* Space between inputs */
+    box-sizing: border-box; /* Include padding in width calculation */
+    transition: transform 0.5s;
+  
+  }
+  #updf {
+    background-color: #ffffff;
+    color:rgba(0, 153, 255, 0.904);
+    width: 20vw; /* Full width of the grid cell */
+    padding: 0.8vw;
+    margin-bottom: 10px; /* Space between inputs */
+    box-sizing: border-box; /* Include padding in width calculation */
+    transition: transform 0.5s;
+    text-align: start;
+  
+  }
+  ::placeholder{
+    font-size: 30vw;
+  }
+  
+  .input-container input {
+    border-color: #000000;
+    border-radius: 0.5vw;
+    border-width: 0vw;
+  }
+  input::placeholder {
+    font-size: 1.1vw;
+    color:rgba(0, 153, 255, 0.904);
+  }
+  input:hover {
+    transform: scale(1.1); 
+  }
+  .Citybox{ 
+    border-color: #000000;
+    border-radius: 0.5vw;
+    border-width: 0vw;
+  }
+  .Citybox::placeholder {
+    font-size: 1.1vw;
+    color:rgba(0, 153, 255, 0.904);
+  }
+  /* .Citybox:hover {
+    transform: scale(1.1); 
+  }
+   */
+  #updf{
+    border-color: #000000;
+    border-radius: 0.5vw;
+    border-width: 0vw;
+  }
+  label{
+    font-size: 1.1vw;
+  }
+  label11{
+    font-size: 1.1vw;
+  }
+  label12{
+    font-size: 1.1vw;
+    display: none;
+  
+  }
+  #updf::placeholder {
+    font-size: 1.1vw;
+    color:rgba(0, 153, 255, 0.904);
+  }
+  
+  #updf:hover { 
+    transform: scale(1.1); 
+  }
+  
+  h3{
+    font-size: 2vw;
+    color:rgba(0, 153, 255, 0.904);
+    padding-top: 9.7vw;
+  }
+  .circle-image-input {
+    width: 9vw; /* Set the width of the circle */
+    height: 9vw; /* Set the height of the circle */
+    border-radius: 50%; /* Make it circular */
+    overflow: hidden; /* Hide overflow */
+    position: absolute; /* Position relative for absolute positioning of img */
+    border: 0.3vw solid #2facff; /* Optional: border for the circle */
+    background-color: #ffffff; /* Background color when no image is selected */
+    cursor: pointer; /* Change cursor to pointer */
+    margin-left: 27.7vw;
+    margin-top: 0.5vw;
+  }
+  
+  .circle-image-input input {
+    display: none; /* Hide the file input */
+  }
+  
+  #profileImage {
+    width: 100%; /* Full width of the circle */
+    height: 100%; /* Full height of the circle */
+    object-fit: cover; /* Cover the circle */
+    border-radius: 50%; /* Match the circle shape */
+    position: absolute; /* Position absolute to fill the circle */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+  }
+.checkbox{
+    width: 2vw;
+    height: 2vw;
+  }
+label{
+    font-size: 1.4vw;
+    color: #007bff;
+    margin-left: -20vw;
+    margin-top: 0.5vw;
+  }
+  #coinpt{
+    padding-left: 25.3vw;
+    border-radius: 5vw;
+    margin-top: -27vw;
+ }
+
+
+   
+#coinpt input{
+    border-color: #000000;
+    border-radius: 0.5vw;
+    border-width: 0vw;
+  }
+  #coinpt input {
+    font-size: 1.2vw;
+    color:rgba(0, 153, 255, 0.904);
+    align-items: center;
+    width: 20vw; /* Full width of the grid cell */
+    padding: 0.8vw;
+    margin-bottom: 1vw; /* Space between inputs */
+    box-sizing: border-box; /* Include padding in width calculation */
+    transition: transform 0.5s;
+  
+  }
+.fromd{
+  color:rgba(0, 0, 0, 0.904);
+  font-size: 1.2vw;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  padding-bottom: -7vw;
+}
+
+.homs {
+    display: flex;
+    justify-content: flex-start;  /* horizontal center */
+    align-items: center;      /* vertical center */
+    height:2vh;             /* full viewport height */
+    width: 100%;
+    margin-top: 30px;               /* full width */
+}
+
+.homs .button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.homs .button img.icon {
+    max-width: 250px;  /* responsive size */
+    width: 150%;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* ===== Responsive adjustments ===== */
+@media (max-width:905px){
+    #bookingForm {
+        margin: 22px auto;
+        max-width: 90vw;
+        max-height: none;
+        border-radius: 10px;
+        background-color: #007bff;
+    }
+    .fhd{
+    height: 100px;
+    color: white;
+    background: #0a80ff;
+    align-items: center;
+    text-align: center;
+    border-radius: 2vw;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    padding-top: 0.1px;
+}
+h1{
+  font-size: 2.8vw;
+    color: #ff7f16;
+    margin-top: 1.5vw;
+}
+h4{
+    font-size: 1.5vw;
+    margin-top: -1.5vw;
+}
+    .input-container {
+        grid-template-columns: 1fr; /* stack fields */
+        gap: 10px;
+        margin-left: 0;
+    }
+      .input-container input{
+        border-radius: 10px;
+      }
+      .Citybox{
+        box-sizing: border-box;
+        border-radius: 10px;
+      }
+      input:hover {
+    transform: none; 
+  }
+
+    input,
+    .Citybox,
+    #updf {
+        width: 100% !important;
+        font-size: 16px !important;
+        padding: 12px !important;
+    }
+
+
+    button,
+    .forma,
+    .sbbt {
+        max-width: 90% !important;
+        width: 100% !important;
+        font-size: 16px !important;
+        height: auto !important;
+        padding: 12px !important;
+        margin: 1px 10px !important;
+        border-radius: 13px;
+    }
+    .service{
+    border-color: #007bff;
+    border-radius: 10px;
+    }
+    .form-content {
+    margin-top: 0.1px;
+    }
+    .heading03{
+    color: #007bff;
+    font-size: 5vw;
+    margin-top: 1vw;
+    margin-left: 12vw;
+  }
+    .circle-image-input {
+        position: static;
+        margin: 10px auto;
+        width: 150px;
+        height: 150px;
+    }
+
+    h1 {
+        font-size: 22px;
+        margin-top: 10px;
+    }
+
+    h3 {
+        font-size: 18px;
+        padding-top: 10px;
+    }
+
+    h4 {
+        font-size: 16px;
+        margin-top: 5px;
+    }
+
+    label {
+        font-size: 3vw !important;
+        margin-left: 11px !important;
+        margin-top: -40px;
+    }
+    label1 {
+        font-size: 3vw !important;
+        margin-left: 11px !important;
+        margin-top: 0px;
+    }
+    label11 {
+        font-size: 3vw !important;
+        margin-left: 11px !important;
+        margin-top: 0px;
+        display: none;
+    }
+    label12{
+      display: flex;
+        font-size: 3vw !important;
+        margin-left: 11px !important;
+        margin-top: 0px;
+    }
+
+    .checkbox {
+        width: 25px;
+        height: 25px;
+        margin-left: 200px;
+    }
+    #coinpt {
+        padding-left: 0;
+        margin-top: 10px;
+    }
+
+    #coinpt input {
+        width: 100% !important;
+        font-size: 16px !important;
+    }
+    #coinpt ::placeholder {
+      font-size: 16px !important;
+
+    }
+   .input-container ::placeholder{
+        width: 100% !important;
+        font-size: 16px !important;
+    }
+    .homs {
+    display:flex;
+    justify-content:flex-start;  /* horizontal center */
+    align-items: center;      /* vertical center */
+    height:2vh;             /* full viewport height */
+    width: 100%;
+    margin-top: 12px;               /* full width */
+    margin-left: -115px;               /* full width */
+}
+
+.homs .button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.homs .button img.icon {
+    width: 30%;
+    height: auto;
+    border-radius: 50%;
+}
+
+}
+/* 
+@media (max-width: 480px){
+    body {
+        padding: 10px;
+    }
+
+    #bookingForm {
+        padding: 15px;
+    }
+
+    input,
+    .Citybox,
+    #updf,
+    button,
+    .sbbt,
+    .forma {
+        font-size: 14px !important;
+        padding: 10px !important;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    h4 {
+        font-size: 14px;
+    }
+
+    label {
+        font-size: 12px !important;
+    }
+
+    .circle-image-input {
+        width: 120px;
+        height: 120px;
+    }
+} */

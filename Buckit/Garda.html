@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive UI – Clean Version</title>
+  <meta name="description" content="Lightweight, responsive UI scaffold with modern CSS and tiny JS." />
+  <style>
+    /* ------------------------------
+       0) RESET + BASE TOKENS
+       ------------------------------ */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Noto Sans, "Apple Color Emoji", "Segoe UI Emoji"; line-height: 1.5; color: var(--fg); background: var(--bg); }
+    img, video { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+
+    :root {
+      /* Theme */
+      --bg: #0b0d12;            /* Deep slate */
+      --bg-soft: #10141c;
+      --card: #121826;
+      --card-2: #0f1420;
+      --fg: #e8eefb;            /* Soft white */
+      --muted: #a7b2c5;
+      --primary: #4f8cff;       /* Accent */
+      --primary-600: #3d73db;
+      --ring: rgba(79,140,255,0.35);
+      --success: #22c55e;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+
+      /* Layout */
+      --radius: 16px;
+      --radius-lg: 22px;
+      --shadow: 0 10px 30px rgba(0,0,0,0.35);
+
+      /* Fluid type scale */
+      --step--1: clamp(0.84rem, calc(0.80rem + 0.2vw), 0.95rem);
+      --step-0: clamp(0.98rem, calc(0.92rem + 0.35vw), 1.06rem);
+      --step-1: clamp(1.15rem, calc(1.02rem + 0.7vw), 1.35rem);
+      --step-2: clamp(1.35rem, calc(1.12rem + 1.2vw), 1.7rem);
+      --step-3: clamp(1.62rem, calc(1.22rem + 2.0vw), 2.2rem);
+      --step-4: clamp(1.9rem, calc(1.3rem + 3.0vw), 2.9rem);
+      --step-5: clamp(2.2rem, calc(1.5rem + 4.2vw), 3.6rem);
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root { --bg: #f7f9fc; --bg-soft: #ffffff; --card: #ffffff; --card-2: #f5f7fb; --fg: #0c1324; --muted: #556080; }
+      .glass { backdrop-filter: saturate(120%) blur(10px); background: color-mix(in oklab, #ffffff 85%, transparent); }
+    }
+
+    .container { width: min(1160px, 92vw); margin-inline: auto; }
+    .section { padding: clamp(40px, 6vw, 90px) 0; }
+    .hidden { display: none !important; }
+
+    /* Focus ring */
+    :focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; box-shadow: 0 0 0 6px var(--ring); border-radius: 10px; }
+
+    /* ------------------------------
+       1) NAVBAR
+       ------------------------------ */
+    .nav-wrap { position: sticky; top: 0; z-index: 40; backdrop-filter: blur(10px) saturate(120%); background: color-mix(in oklab, var(--bg) 70%, transparent); border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 0; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: var(--step-1); letter-spacing: 0.3px; }
+    .logo { width: 40px; height: 40px; border-radius: 50%; background: radial-gradient(120% 120% at 20% 10%, var(--primary), #7aa8ff 40%, #cce0ff 70%); box-shadow: 0 6px 18px rgba(79,140,255,0.35); }
+
+    .nav-links { display: flex; align-items: center; gap: 8px; }
+    .nav-links a { padding: 8px 12px; border-radius: 999px; color: var(--muted); transition: 160ms ease; }
+    .nav-links a:hover { color: var(--fg); background: rgba(255,255,255,0.06); }
+
+    .cta { display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 999px; background: linear-gradient(135deg, var(--primary), #9cbcff); color: #041025; font-weight: 700; border: 0; box-shadow: 0 8px 24px rgba(79,140,255,0.35); cursor: pointer; }
+    .cta:active { transform: translateY(1px); }
+
+    .hamburger { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; background: color-mix(in oklab, var(--card) 70%, transparent); cursor: pointer; }
+    .hamburger svg { width: 22px; height: 22px; }
+
+    /* Mobile drawer */
+    .drawer { position: fixed; inset: 0; display: grid; grid-template-rows: 1fr auto; background: color-mix(in oklab, var(--bg) 70%, transparent); backdrop-filter: blur(12px) saturate(120%); padding: 18px; opacity: 0; pointer-events: none; transition: 200ms ease; }
+    .drawer.active { opacity: 1; pointer-events: auto; }
+    .drawer-card { width: min(520px, 92vw); margin-inline: auto; background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: var(--radius-lg); padding: 18px; box-shadow: var(--shadow); }
+    .drawer a { display: block; padding: 12px 14px; border-radius: 12px; color: var(--fg); }
+    .drawer a:hover { background: rgba(255,255,255,0.06); }
+
+    @media (min-width: 900px) {
+      .hamburger { display: none; }
+    }
+    @media (max-width: 899px) {
+      .nav-links, .cta { display: none; }
+    }
+
+    /* ------------------------------
+       2) HERO
+       ------------------------------ */
+    .hero { position: relative; padding: clamp(50px, 10vw, 120px) 0; }
+    .backdrop {
+      position: absolute; inset: -10% -10% auto -10%; height: 70%; z-index: -1; pointer-events: none;
+      background: radial-gradient(40% 30% at 30% 20%, rgba(79,140,255,0.35), transparent 60%),
+                  radial-gradient(35% 28% at 75% 35%, rgba(157, 88, 255, 0.28), transparent 60%);
+      filter: blur(40px) saturate(140%);
+    }
+    .hero-grid { display: grid; gap: 22px; align-items: center; grid-template-columns: 1fr; }
+    .hero h1 { font-size: var(--step-5); line-height: 1.06; letter-spacing: -0.02em; margin: 0 0 8px; }
+    .hero p { color: var(--muted); font-size: var(--step-1); margin: 0 0 22px; }
+    .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .ghost { padding: 10px 16px; border: 1px solid rgba(255,255,255,0.14); border-radius: 999px; background: transparent; color: var(--fg); }
+
+    .hero-media { aspect-ratio: 16/10; border-radius: var(--radius-lg); background: linear-gradient(180deg, var(--card), var(--card-2)); border: 1px solid rgba(255,255,255,0.06); overflow: hidden; box-shadow: var(--shadow); }
+    .hero-media .frame { width: 100%; height: 100%; display: grid; place-items: center; font-weight: 600; color: var(--muted); }
+
+    @media (min-width: 900px) {
+      .hero-grid { grid-template-columns: 1.05fr 1fr; gap: 30px; }
+    }
+
+    /* ------------------------------
+       3) FEATURES GRID
+       ------------------------------ */
+    .features { display: grid; gap: 14px; grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    @media (min-width: 640px) { .features { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1000px) { .features { grid-template-columns: repeat(4, 1fr); } }
+
+    .card { background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: var(--radius); padding: 16px; display: grid; gap: 10px; min-height: 160px; }
+    .card h3 { margin: 0; font-size: var(--step-1); }
+    .card p { margin: 0; font-size: var(--step-0); color: var(--muted); }
+    .icon { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 12px; background: rgba(79,140,255,0.18); }
+
+    /* ------------------------------
+       4) SHOWCASE / SLIDER (tiny, no lib)
+       ------------------------------ */
+    .slider { position: relative; overflow: hidden; border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.06); background: var(--card-2); }
+    .slides { display: flex; transition: transform 500ms ease; will-change: transform; }
+    .slide { min-width: 100%; aspect-ratio: 16/8.8; display: grid; place-items: center; font-weight: 700; color: var(--muted); }
+    .dots { position: absolute; inset: auto 0 10px; display: flex; gap: 6px; justify-content: center; }
+    .dot { width: 8px; height: 8px; border-radius: 999px; background: rgba(255,255,255,0.35); border: 1px solid rgba(0,0,0,0.2); }
+    .dot.active { background: var(--primary); }
+
+    /* ------------------------------
+       5) PRICING / CARDS ROW
+       ------------------------------ */
+    .pricing { display: grid; gap: 14px; grid-template-columns: repeat(1, 1fr); }
+    @media (min-width: 780px) { .pricing { grid-template-columns: repeat(3, 1fr); } }
+    .price-card { background: linear-gradient(180deg, var(--card), var(--card-2)); border: 1px solid rgba(255,255,255,0.08); padding: 18px; border-radius: var(--radius-lg); box-shadow: var(--shadow); display: grid; gap: 12px; }
+    .price-card h4 { margin: 0; font-size: var(--step-1); }
+    .price { font-size: var(--step-3); font-weight: 800; letter-spacing: -0.02em; }
+    .list { display: grid; gap: 8px; color: var(--muted); font-size: var(--step-0); }
+
+    /* ------------------------------
+       6) FOOTER
+       ------------------------------ */
+    footer { border-top: 1px solid rgba(255,255,255,0.08); background: linear-gradient(180deg, transparent, rgba(255,255,255,0.02)); }
+    .foot { display: grid; gap: 18px; grid-template-columns: 1fr; padding: 28px 0; align-items: center; }
+    .foot .links { display: grid; gap: 8px; grid-auto-flow: column; grid-auto-columns: max-content; overflow: auto; }
+    .foot .copy { color: var(--muted); font-size: var(--step--1); }
+
+    /* ------------------------------
+       7) UTILS
+       ------------------------------ */
+    .badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 10px; border-radius: 999px; background: rgba(79,140,255,0.18); color: #cfe0ff; border: 1px solid rgba(79,140,255,0.25); font-weight: 600; font-size: var(--step--1); }
+    .stack { display: grid; gap: 10px; }
+    .cluster { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    .spacer { height: 28px; }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <div class="nav-wrap">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="#" aria-label="Home">
+        <span class="logo" aria-hidden="true"></span>
+        Clean UI
+      </a>
+
+      <div class="nav-links" role="menubar">
+        <a role="menuitem" href="#features">Features</a>
+        <a role="menuitem" href="#showcase">Showcase</a>
+        <a role="menuitem" href="#pricing">Pricing</a>
+        <a role="menuitem" href="#contact">Contact</a>
+      </div>
+
+      <button class="cta" id="primaryCta" aria-label="Get Started">
+        <span>Get Started</span>
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/></svg>
+      </button>
+
+      <button class="hamburger" id="openDrawer" aria-label="Open Menu" aria-controls="mobileDrawer" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </nav>
+  </div>
+
+  <!-- MOBILE DRAWER -->
+  <div class="drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-card">
+      <div class="stack" style="margin-bottom: 6px;">
+        <div class="brand">
+          <span class="logo"></span>
+          Clean UI
+        </div>
+      </div>
+      <div class="stack" style="padding: 8px 0;">
+        <a href="#features">Features</a>
+        <a href="#showcase">Showcase</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="cluster" style="justify-content: space-between; margin-top: 8px;">
+        <button class="ghost" id="closeDrawer">Close</button>
+        <button class="cta">Get Started</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero section">
+    <div class="backdrop" aria-hidden="true"></div>
+    <div class="container hero-grid">
+      <div>
+        <span class="badge">New • Responsive & Lightweight</span>
+        <h1>Build sleek, responsive layouts that look great on every screen.</h1>
+        <p>Modern CSS (no frameworks), fluid typography, auto-grids, a tiny slider, and accessible navigation—all in one clean template you can adapt to any brand.</p>
+        <div class="hero-actions">
+          <button class="cta">Start Free</button>
+          <button class="ghost">Live Demo</button>
+        </div>
+        <div class="spacer"></div>
+        <div class="cluster" aria-label="Stats">
+          <div class="badge" title="Performance"><strong>98+</strong> Lighthouse</div>
+          <div class="badge" title="Bundle size"><strong>~6KB</strong> CSS + JS</div>
+          <div class="badge" title="Compatibility">Mobile • Tablet • Desktop</div>
+        </div>
+      </div>
+      <div class="hero-media" aria-label="Preview">
+        <div class="frame">Drop your screenshot/video here</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- FEATURES -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="stack" style="margin-bottom: 16px;">
+        <h2 style="margin:0; font-size: var(--step-3);">Core features</h2>
+        <p style="margin:0; color: var(--muted); max-width: 62ch;">Auto-layout grids, accessible components, and sensible defaults. Replace content and colors to match your design.</p>
+      </div>
+
+      <div class="features">
+        <article class="card">
+          <div class="icon" aria-hidden="true">💎</div>
+          <h3>Fluid Typography</h3>
+          <p>Text scales smoothly with <code>clamp()</code> for perfect readability on all screens.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">🧭</div>
+          <h3>Sticky Navbar</h3>
+          <p>Adaptive nav with mobile drawer using a few lines of accessible JS.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">📐</div>
+          <h3>Auto Grids</h3>
+          <p>Responsive CSS Grid utilities—no media-query soup required.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">⚡</div>
+          <h3>Tiny Slider</h3>
+          <p>Zero-dependency showcase slider with dots and autoplay.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOWCASE / SLIDER -->
+  <section class="section" id="showcase">
+    <div class="container">
+      <div class="stack" style="margin-bottom: 16px;">
+        <h2 style="margin:0; font-size: var(--step-3);">Showcase</h2>
+        <p style="margin:0; color: var(--muted); max-width: 62ch;">Swap these slides with your screenshots. Works with images or HTML content.</p>
+      </div>
+
+      <div class="slider" data-autoplay="true" data-interval="3500">
+        <div class="slides">
+          <div class="slide" style="background: linear-gradient(135deg, #0e1726, #1b2845);">Slide 1</div>
+          <div class="slide" style="background: linear-gradient(135deg, #13201e, #204f46);">Slide 2</div>
+          <div class="slide" style="background: linear-gradient(135deg, #22131e, #4d2741);">Slide 3</div>
+        </div>
+        <div class="dots" aria-label="Slide navigation" role="tablist"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING / CARDS ROW -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <div class="stack" style="margin-bottom: 16px;">
+        <h2 style="margin:0; font-size: var(--step-3);">Simple pricing</h2>
+        <p style="margin:0; color: var(--muted); max-width: 62ch;">Transparent tiers with features grouped clearly. Adjust to your content length.</p>
+      </div>
+
+      <div class="pricing">
+        <article class="price-card">
+          <h4>Starter</h4>
+          <div class="price">$0</div>
+          <div class="list">
+            <div>✔ Responsive layout</div>
+            <div>✔ Basic components</div>
+            <div>— Community support</div>
+          </div>
+          <button class="ghost">Choose Starter</button>
+        </article>
+
+        <article class="price-card" style="border-color: rgba(79,140,255,0.35); box-shadow: 0 12px 36px rgba(79,140,255,0.18);">
+          <h4>Pro</h4>
+          <div class="price">$19</div>
+          <div class="list">
+            <div>✔ Everything in Starter</div>
+            <div>✔ Slider + Utilities</div>
+            <div>✔ Email support</div>
+          </div>
+          <button class="cta">Choose Pro</button>
+        </article>
+
+        <article class="price-card">
+          <h4>Team</h4>
+          <div class="price">$49</div>
+          <div class="list">
+            <div>✔ Team license</div>
+            <div>✔ Priority support</div>
+            <div>✔ Custom components</div>
+          </div>
+          <button class="ghost">Choose Team</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div class="container foot">
+      <div class="brand"><span class="logo"></span>Clean UI</div>
+      <div class="links">
+        <a href="#">Docs</a>
+        <a href="#">API</a>
+        <a href="#">Status</a>
+        <a href="#">Support</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+      <div class="copy">© <span id="year"></span> Clean UI. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    // ------------------------------
+    // A) MOBILE DRAWER TOGGLER
+    // ------------------------------
+    const drawer = document.getElementById('mobileDrawer');
+    const openBtn = document.getElementById('openDrawer');
+    const closeBtn = document.getElementById('closeDrawer');
+
+    function setDrawer(open) {
+      drawer.classList.toggle('active', open);
+      drawer.setAttribute('aria-hidden', String(!open));
+      openBtn.setAttribute('aria-expanded', String(open));
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    openBtn?.addEventListener('click', () => setDrawer(true));
+    closeBtn?.addEventListener('click', () => setDrawer(false));
+    drawer?.addEventListener('click', (e) => {
+      if (e.target === drawer) setDrawer(false);
+    });
+
+    // Close on escape
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') setDrawer(false);
+    });
+
+    // ------------------------------
+    // B) TINY SLIDER (Autoplay + Dots)
+    // ------------------------------
+    function tinySlider(root) {
+      const track = root.querySelector('.slides');
+      const slides = Array.from(root.querySelectorAll('.slide'));
+      const dotsWrap = root.querySelector('.dots');
+      const interval = Number(root.dataset.interval || 4000);
+      const autoplay = root.dataset.autoplay !== 'false';
+      let index = 0, timer;
+
+      function go(i) {
+        index = (i + slides.length) % slides.length;
+        track.style.transform = `translateX(${-index * 100}%)`;
+        Array.from(dotsWrap.children).forEach((d, di) => d.classList.toggle('active', di === index));
+      }
+
+      // Build dots
+      dotsWrap.innerHTML = '';
+      slides.forEach((_, i) => {
+        const b = document.createElement('button');
+        b.className = 'dot';
+        b.type = 'button';
+        b.setAttribute('role', 'tab');
+        b.setAttribute('aria-label', `Go to slide ${i+1}`);
+        b.addEventListener('click', () => { go(i); restart(); });
+        dotsWrap.appendChild(b);
+      });
+
+      function start() { if (!autoplay) return; timer = setInterval(() => go(index + 1), interval); }
+      function stop() { clearInterval(timer); }
+      function restart() { stop(); start(); }
+
+      root.addEventListener('pointerenter', stop);
+      root.addEventListener('pointerleave', start);
+      window.addEventListener('visibilitychange', () => document.hidden ? stop() : start());
+
+      go(0); start();
+      return { go, start, stop };
+    }
+
+    document.querySelectorAll('.slider').forEach(tinySlider);
+
+    // ------------------------------
+    // C) FOOTER YEAR
+    // ------------------------------
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

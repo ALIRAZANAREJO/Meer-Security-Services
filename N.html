@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+    <!-- TailwindCSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    
+    <!-- <link rel="stylesheet" href="/Css/Stategy.css">
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="N.css">
+    <link rel="stylesheet" href="Searcch.Css">
+    <link rel="stylesheet" href="./Css/Slider.css"> -->
+    <link rel="stylesheet" href="./Buckit/NN.css"> <!-- Add this line for responsive styles -->
+    
+    <title>Responsive Navbar</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo-container">
+            <img class="fd-logo" src="./image/MeerLOGO.png" alt="Logo">
+            <h5>Meer Security</h5>
+        </div>
+        <!-- <svg class="loc-logo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C8.5 2 5 5.5 5 9C5 12.5 8.5 17 12 21.5C15.5 17 19 12.5 19 9C19 5.5 15.5 2 12 2ZM12 12.25C10.62 12.25 9.5 11.13 9.5 9.75C9.5 8.37 10.62 7.25 12 7.25C13.38 7.25 14.5 8.37 14.5 9.75C14.5 11.13 13.38 12.25 12 12.25Z" stroke="#6e6e6e" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg> -->
+        <div class="location">Office no.1, 1st Floor, Building, 3-C 22nd Commercial St, Phase 2 Commercial Area Defence Housing Authority, Karachi</div>
+        
+        <!-- Small Circular Images -->
+        <div class="circle-images">
+            <img src="./Cimg/Nadra-logo.png" alt="Image 1" class="circle-image">
+            <img src="./Cimg/APSAA-Logo.png" alt="Image 2" class="circle-image">
+            <img src="./Cimg/CRO-Logo.png" alt="Image 3" class="circle-image">
+            <img src="./Cimg/Pakistan-Army-Logo.png" alt="Image 4" class="circle-image">
+        </div>
+
+        <div class="icons">
+            <div class="button-container">
+                <a href="/Navbar/Clints/Clints.html">
+                    <button  class="button" onclick="selectButton(this)" style="text-decoration: none;">
+                        <img class="icon" src="./icons/home (5).png">Home
+                    </button>
+                </a>
+             
+              
+    <div class="dropdown-container">
+                    <button class="button" onmouseover="showDropdown(this)" onmouseout="hideDropdown(this)">
+                        <img class="icon" src="./icons/suitcase (3).png">About-Us
+                    </button>
+                    <ul class="dropdown" style="display: none;">
+                       <li><a href="./Navbar/Aboutus/Company/Company.html">Company</a></li>
+                        <li><a href="./Navbar/Aboutus/Staf.html">Staff</a></li>
+                        <li><a href="./Properties/MD.html">Owner</a></li>
+                        <li><a href="./Navbar/Aboutus/Certificates.html">Awards/Cert</a></li>
+                        <li><a href="./Navbar/Aboutus/Website.html">Web</a></li>
+                    </ul>
+                </div>              
+
+             <div class="dropdown-container" onmouseenter="showDropdown()" onmouseleave="hideDropdown()">
+                    <button class="button" onclick="toggleDropdown()">
+                        <img class="icon" src="./icons/repairing-service.png">Services
+                    </button>
+                    <ul class="dropdown" style="display: none;">
+                        <li><a href="./Navbar/Services/Guard-Ser.html">Sec Guard</a></li>
+                        <li><a href="./Navbar/Services/SSG.html">SSG</a></li>
+                        <li><a href="./Navbar/Services/Boody-G.html">Body Guard</a></li>
+                        <li><a href="./Navbar/Services/Scout.html">Protocol</a></li>
+                        <li><a href="./Navbar/Services/Vehicle.html">Vehicle</a></li>
+                    </ul>
+                </div>
+         <div class="dropdown-container">
+  <button class="button">Services</button>
+  <div class="dropdown">
+    <a href="#">Web Design</a>
+    <a href="#">App Development</a>
+    <a href="#">SEO</a>
+  </div>
+</div>
+
+ <div class="dropdown-container">
+  <button class="button">About</button>
+  <ul id="dropdown-about" class="dropdown">
+    <li><a href="#">Company</a></li>
+    <li><a href="#">Team</a></li>
+  </ul>
+</div>
+<div class="dropdown-container">
+  <button class="button">Servicesssss</button>
+  <div class="dropdown">
+    <a href="#">Web Design</a>
+    <a href="#">App Development</a>
+    <a href="#">SEO</a>
+  </div>
+</div>
+ss
+
+                <a href="/Navbar/Contact/Contact-Us.html">
+                    <button class="button" onclick="selectButton(this)">
+                        <img class="icon" src="./icons/viber.png">Cont-Us
+                    </button>
+                </a>
+                <a href="">
+                    <button class="button" id="user-profile-btn" onclick="selectButton(this)">
+                        <img class="icon" src="./icons/user.png">Profile
+                    </button>
+                </a>
+              
+            </div>
+        </div>
+        <button class="hamburger" onclick="toggleNavbar()">☰</button>
+    </div>
+
+    <script src="./Buckit/NN.js"></script>
+    <!-- <script src="Search.js"></script>       -->
+
+</body>
+</html>

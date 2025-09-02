@@ -1,0 +1,107 @@
+body{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;  
+}
+.input-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
+  grid-gap: 10px; /* Adjust the space between inputs */
+}
+
+.input-container input {
+  width: 100%; 
+  border-color: #02ff24;
+  border-radius: 5px;
+  border-width: 0.5px;
+}
+input::placeholder {
+  color:rgba(0, 153, 255, 0.904); 
+}
+h1{
+  font-size: 40px;
+
+}
+
+.input-container {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 400px); /* Two columns with equal width */
+  grid-gap: 10px; /* Adjust the space between inputs */
+}
+
+.input-container input {
+  width: 350px; /* Each input takes up full width of its column */
+  height: 45px;
+  margin-left: 300px;
+  padding-left: 25px;
+  font-size: 15px;
+  fill: none;
+}
+/* button{
+  width: 200px;
+  height: 40px;
+  background-color: rgb(42, 42, 255);
+  border-radius: 20px;
+  border-color:  rgb(42, 42, 255);
+  font-size: 20px;
+  margin-left: 360px;
+  align-items: center;
+} */
+
+button{
+  width: 150px;
+  height: 50px;
+  margin-left: 370px;
+  margin-top: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  background: linear-gradient(-135deg, #ea00ff, #02ff24);
+  transition: all 0.3s ease;
+  width: 200px;
+  height: 40px;
+  border-radius: 15px;
+  align-items: center;
+  
+}
+.expand-button {
+  padding: 10px 20px; /* Initial padding */
+  transition: width 0.3s ease; /* Add smooth transition effect */
+}
+
+.expand-button:hover {
+  width: 300px; /* Adjust the width on hover */
+}
+
+#Genbox{
+  width: 380px;
+  height: 45px;
+  padding-left: 20px;
+  margin-left: 300px; 
+  border-color: #02ff24;
+  border-radius: 5px;
+  border-width: 0.5px;
+  color:rgba(0, 153, 255, 0.904);
+}
+#Citybox{
+  width: 380px;
+  height: 45px;
+  padding-left: 20px;
+  margin-left: 300px;
+  border-color: #02ff24;
+  border-radius: 5px;
+  border-width: 0.5px;
+  color:rgba(0, 153, 255, 0.904);
+
+}
+#Coursebox{
+  width: 380px;
+  height: 45px;
+  padding-left: 20px;
+  margin-left: 300px;
+  border-color: #02ff24;
+  border-radius: 5px;
+  border-width: 0.5px;
+  color:rgba(0, 153, 255, 0.904);
+
+}
+

@@ -1,0 +1,346 @@
+.slider {
+    width: 100%;
+    height: 420px;
+    position: relative;
+    overflow: hidden;
+    background-color: #00337f;
+  }
+
+  .carousel {
+    display: flex;
+    width: 100%;
+    height: 120%;
+    margin-left: -19px;
+    margin-top: -20px;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .list {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .item {
+    flex: 1;
+    display: flex;
+    padding: -100px;
+  }
+
+  .contenter{
+    width: 30vw;
+    height: 400px;
+    flex: 1;
+    background-color: #0038a1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+  }
+
+  .slhd{
+    width: 20vw;
+    font-size: 2vw;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    margin-top: -100px;
+    margin-left: 10px;
+  }
+
+  .contenter p{
+    font-size: 1.3vw;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    margin-bottom: 10px;
+    margin-top: -10px;
+    margin-left: 10px;
+  }
+
+  .contenter button {
+    height: 40px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    background-color: #ffffff;
+    color:  #0038a1;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-left: 10px;
+  }
+
+  .contenter button:hover{
+    height: 40px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    border: 2px solid rgb(255, 255, 255); /* Initial border color */
+    padding: 10px;
+  
+  }
+  
+  .contenter button:hover {
+    height: 40px;
+    padding: 5px 20px;
+    color: rgb(255, 255, 255);
+    background-color: #0038a1;
+    border-color:rgb(255, 255, 255); /* Border color on hover */
+  }
+  .image {
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .imgarea img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+.imgarea{
+  width: 900px;
+}
+  .controls {
+    position: absolute;
+    top: 50%;
+    font-size: 10px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+
+  .arrow-container {
+    position: absolute;
+    bottom: 25px;
+    left: 35%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+  }
+
+  .prev {
+    left: -200px; /* Adjust position to the left */
+    top: -10px;
+  }
+
+  .next {
+    right: 80px; /* Adjust position to the right */
+    top: -10px;
+  }
+
+  .prev img {
+    width: 30px; /* Adjust position to the left */
+  }
+
+  .next img {
+    width: 30px; /* Adjust position to the left */
+  }
+
+  .pause-btn {
+    position: absolute;
+    bottom: 25px;
+    left: 24.5%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-image: url('/Cimg/video-pause-button.png');
+    background-size: cover;
+  }
+
+  .pause-btn.resume {
+    background-image: url('/Cimg/play-button.png');
+  }
+
+
+
+  @keyframes runningTime {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  .indicators {
+    position: absolute;
+    bottom: 30px;
+    left: 3%;
+    transform: trawnslateX(-50%);
+    display: flex;
+    gap: 10px;
+  }
+
+  .indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .indicator.active {
+    background-color: #ffffff;
+  }
+
+  .current-slide {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 43, 161, 0.973);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: white;
+  }
+
+
+
+
+
+.Obtainer{
+  width: 50vw;
+  height: 20vw;
+  display: flex;
+  margin-left: 7vw;
+  margin-top: 40px;
+
+}
+.Obtimg{
+  width: 20vw;
+  height: 25vw;
+}
+.Obtimg img{
+  border-radius: 20px;
+
+}
+.Obttext{
+  width: 200px;
+  height: 200px;
+  margin-left: 8vw;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.Obttext h6{
+  width: 600px;
+  height: 20px;
+  text-align: start;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2.5vw;
+
+}
+.Obttext p{
+  width: 53vw;
+  height: 20px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.5vw;
+  margin-top: -45px;
+}
+.Obttext button{
+  width: 18vw;
+  height: 45px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  background-color: rgb(0, 52, 221);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-left: 0px;
+  margin-top: 50px;
+  margin-top: 60px;
+
+}
+
+.Obttext button:hover{
+  border: 2px solid blue; /* Initial border color */
+  padding: 10px;
+
+}
+
+.Obttext button:hover {
+  color: blue;
+  background-color: white;
+  border-color:blue; /* Border color on hover */
+}
+
+.Odtainer{
+  width: 90vw;
+  height: 20vw;
+  display: flex;
+  margin-left: 3vw;
+  margin-top: 20px;
+
+}
+.Odtimg{
+  width: 20vw;
+  height: 25vw;
+  margin-left: 570px;
+}
+.Odtimg img{
+  border-radius: 20px;
+
+}
+.Odttext{
+  width: 200px;
+  height: 200px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 4vw;
+  
+}
+.Odttext h6{
+  width: 750px;
+  height: 20px;
+  text-align: start;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2.5vw;
+  margin-top: 20px;
+
+}
+.Odttext p{
+  width: 55vw;
+  height: 20px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.5vw;
+  margin-top: -35px;
+}
+.Odttext button{
+  width: 18vw;
+  height: 45px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  background-color: rgb(0, 52, 221);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-left: 0px;
+  margin-top: 60px;
+}
+
+.Odttext button:hover{
+  border: 2px solid blue; /* Initial border color */
+
+  padding: 10px;
+
+}
+
+.Odttext button:hover {
+  color: blue;
+  background-color: white;
+  border-color:blue; /* Border color on hover */
+}

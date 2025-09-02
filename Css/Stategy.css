@@ -1,0 +1,261 @@
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f2f4f8;
+    }
+
+    .meer-section {
+      padding: 60px 20px;
+    }
+
+    .meer-text-center {
+      text-align: center;
+    }
+
+    .meer-heading {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1d1d1d;
+      margin-bottom: 10px;
+    }
+
+
+    .meer-subtext {
+      font-size: 1.1rem;
+      color: #555;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .meer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+      padding: 0 10px;
+    }
+
+    .meer-box {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+      padding: 30px 20px;
+      text-align: center;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .meer-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .meer-icon {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .meertit {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color:  #00337f;
+      text-align: center;
+    }
+
+    .meer-box p {
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .meer-3-col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .meer-card {
+      background: #f5f7fa;
+      border-radius: 15px;
+      padding: 25px 15px;
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #333;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    .meer-card:hover {
+      background: #00337f;
+      color: white;
+      transform: translateY(-6px);
+    }
+
+    .meer-bg-gray {
+      background-color: #f8f9fb;
+      border-radius: 30px;
+    }
+
+    .meer-bg-white {
+      background-color: #ffffff;
+      border-radius: 30px;
+    }
+
+    /* === Responsive === */
+    @media (max-width: 768px) {
+      .meer-heading {
+        font-size: 2rem;
+      }
+
+      .meer-subtext {
+        font-size: 1rem;
+      }
+
+      .meer-box,
+      .meer-card {
+        padding: 20px 12px;
+      }
+
+      .meer-icon {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+
+      .meertit {
+        font-size: 1.1rem;
+        text-align: center;
+      }
+
+      .meer-box p {
+        font-size: 0.95rem;
+        text-align: center;
+      }
+
+      .meer-grid {
+        gap: 20px;
+      }
+
+      .meer-3-col {
+        gap: 15px;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      }
+
+      .meer-card {
+        font-size: 1rem;
+        padding: 18px 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .meer-heading {
+        font-size: 1.6rem;
+      }
+
+      .meer-subtext {
+        font-size: 0.95rem;
+      }
+
+      .meertit{
+        font-size: 1rem;
+        align-items: center;
+        text-align: center;
+      }
+
+      .meer-box p {
+        font-size: 0.9rem;
+      }
+
+      .meer-card {
+        font-size: 0.95rem;
+        padding: 15px 8px;
+      }
+    }
+
+
+
+
+
+
+
+
+
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.video-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  flex: 1 1 30%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+  margin-top: 50px;
+  transition: transform 0.3s ease;
+}
+
+.video-frame {
+  width: 100%;
+  height: 200px; /* fixed height */
+}
+
+.video-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-text {
+  padding: 12px;
+  text-align: center;
+}
+
+.video-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 8px 0 4px;
+}
+
+.video-subtitle {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+.video-heading{
+  padding-bottom: 50px;
+    margin-top: 100px;
+}
+
+/* 🔧 Responsive fix */
+@media (max-width: 576px) {
+  .video-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .video-card {
+    flex: 1 1 100%;
+    max-width: 90%;
+  }
+
+  .video-frame {
+    height: 50px; /* 📉 shrink video height */
+  }
+
+  .video-title {
+    font-size: 1rem;
+  }
+
+  .video-subtitle {
+    font-size: 0.85rem;
+  }
+}
