@@ -245,7 +245,7 @@ nav .navbar .links li .sub-menu li a:hover{
     display: block;
     max-width: 270px;
     width: 100%;
-    background:   #00337f;
+    background:   #ffffff;
     line-height: 40px;
     padding: 20px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -259,12 +259,12 @@ nav .navbar .links li .sub-menu li a:hover{
   }
   .sidebar-logo .logo-name{
     font-size: 25px;
-    color: #fff;
+    color: #00337f;
   }
     .sidebar-logo  i,
     .navbar .bx-menu{
       font-size: 25px;
-      color: #fff;
+      color:  #00337f;
     }
   nav .navbar .links{
     display: block;
